@@ -1,0 +1,738 @@
+<title>Reg Watch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Source+Serif+4:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --bg: #e7e7e4; --surface: #fbfbf9; --surface-2: #efefec; --hair: #d4d4cf; --line: #6c6c66;
+  --fg: #111111; --muted: #48484a; --accent: #1f2f5c; --accent-ink: #ffffff; --mark: #b3141d;
+  --good: #1d6331; --warn: #7f4e00; --bad: #a0151d; --field: #ffffff;
+  --chart-1: #1f2f5c; --chart-2: #b3141d; --chart-3: #111111; --chart-4: #6c6c66; --chart-grid: #dcdcd6;
+  --display: "Old Standard TT", "Century Schoolbook", "Times New Roman", "Nimbus Roman", "DejaVu Serif", serif;
+  --body: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", "DejaVu Serif", serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1a1f; --surface: #12232a; --surface-2: #193039; --hair: #24414b; --line: #6f97a3;
+  --fg: #e6f2f4; --muted: #a8c3c9; --accent: #9fd6e3; --accent-ink: #08191e; --mark: #ff8a8a;
+  --good: #8bd9a4; --warn: #f0c068; --bad: #ffa58a; --field: #0f1f25;
+  --chart-1: #9fd6e3; --chart-2: #ff8a8a; --chart-3: #e6f2f4; --chart-4: #d8c48a; --chart-grid: #213c45;
+  --display: "Old Standard TT", "Century Schoolbook", "Times New Roman", "Nimbus Roman", "DejaVu Serif", serif;
+  --body: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", "DejaVu Serif", serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0d1a1f; --surface: #12232a; --surface-2: #193039; --hair: #24414b; --line: #6f97a3;
+  --fg: #e6f2f4; --muted: #a8c3c9; --accent: #9fd6e3; --accent-ink: #08191e; --mark: #ff8a8a;
+  --good: #8bd9a4; --warn: #f0c068; --bad: #ffa58a; --field: #0f1f25;
+  --chart-1: #9fd6e3; --chart-2: #ff8a8a; --chart-3: #e6f2f4; --chart-4: #d8c48a; --chart-grid: #213c45;
+  --display: "Old Standard TT", "Century Schoolbook", "Times New Roman", "Nimbus Roman", "DejaVu Serif", serif;
+  --body: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", "DejaVu Serif", serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  color-scheme: dark; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.wrap {
+  max-width: 1040px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 16px 32px;
+}
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.seg input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Masthead: the register issue */
+header { margin-bottom: 14px; }
+.mast { border-top: 4px solid var(--fg); border-bottom: 1px solid var(--fg); padding: 4px 0 8px; margin-bottom: 10px; }
+.vol { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .02em; border-bottom: 1px solid var(--fg); padding-bottom: 3px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: 2.6rem; line-height: 1.05; text-align: center; margin: 8px 0 0; letter-spacing: .01em; }
+.lede { margin: 0; font-size: 16px; line-height: 1.45; }
+.ri { font-variant: small-caps; font-weight: 700; letter-spacing: .04em; text-transform: lowercase; margin-right: .3em; }
+.data-note { margin: 10px 0 0; font-size: 16px; font-style: italic; color: var(--fg); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 6px 0; }
+.data-note.err { color: var(--bad); font-style: normal; }
+
+/* Panels: sections of the issue */
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.35rem; font-variant: small-caps; text-transform: lowercase; letter-spacing: .05em; margin: 0 0 10px; }
+.panel { background: var(--surface); border-top: 1px solid var(--fg); border-bottom: 1px solid var(--hair); padding: 12px 16px 14px; margin-bottom: 14px; min-width: 0; }
+.panel-head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--hair); margin-bottom: 12px; }
+.panel-head h2 { margin-bottom: 6px; }
+.tag { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px 16px; }
+.grid > * { min-width: 0; }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field.wide { grid-column: 1 / -1; }
+.field label, .field .lbl { font-family: var(--body); font-weight: 600; font-size: 15px; font-variant: small-caps; text-transform: lowercase; letter-spacing: .04em; color: var(--fg); }
+input[type=text], input[type=search], input[type=date], input[type=number], select {
+  font-family: var(--body); font-size: 16px; min-height: 44px;
+  background: var(--field); color: var(--fg); border: 1px solid var(--line); border-radius: 0;
+  padding: 8px 10px; width: 100%; min-width: 0;
+}
+input[type=search], input[type=date], input[type=number] { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.seg { display: inline-flex; flex-wrap: wrap; gap: 1px; border: 1px solid var(--line); max-width: 100%; background: var(--line); }
+.seg label { position: relative; cursor: pointer; flex: 1 1 auto; background: var(--field); }
+.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.seg span { display: flex; align-items: center; min-height: 44px; padding: 6px 14px; font-size: 16px; color: var(--fg); }
+.seg input:checked + span { background: var(--accent); color: var(--accent-ink); }
+button {
+  font-family: var(--body); font-size: 16px; font-weight: 600; cursor: pointer; min-height: 44px;
+  border: 1px solid var(--line); background: var(--surface-2); color: var(--fg);
+  border-radius: 0; padding: 8px 16px;
+}
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.row-actions { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 14px; align-items: center; }
+.hint { font-size: 14px; color: var(--muted); margin: 4px 0 0; line-height: 1.45; }
+
+/* Summary line: run-in entries; the comment deadline count is the key answer */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px 0; margin-bottom: 14px; border-bottom: 1px solid var(--hair); padding-bottom: 10px; }
+.tile { padding: 4px 14px; border-left: 1px solid var(--hair); min-width: 0; }
+.tile .k { display: inline; font-weight: 700; font-variant: small-caps; text-transform: lowercase; letter-spacing: .04em; font-size: 16px; }
+.tile .k::after { content: ":"; }
+.tile .v { display: inline; margin-left: .35em; font-family: var(--body); font-weight: 600; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; line-height: 1.2; }
+.tile.key { border-left: 3px solid var(--mark); }
+.tile.key .k { color: var(--mark); }
+
+/* Entries: the register's documents */
+.docs { list-style: none; margin: 0; padding: 0; }
+.doc { border-top: 1px solid var(--hair); padding: 12px 0; min-width: 0; }
+.doc:first-child { border-top: none; padding-top: 2px; }
+.doc-meta { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 13px; color: var(--muted); }
+.date { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.doc-meta .date { font-size: 13px; }
+.doc-title { margin: 6px 0 4px; font-family: var(--body); font-size: 17px; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.doc-title a { color: var(--fg); text-decoration-color: var(--line); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.doc-title a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.doc-lines { display: flex; flex-direction: column; gap: 1px; font-size: 16px; line-height: 1.45; }
+.doc-lines > span { min-width: 0; overflow-wrap: anywhere; }
+.doc-lines .k { display: inline-flex; margin-right: .35em; font-weight: 700; font-variant: small-caps; text-transform: lowercase; letter-spacing: .04em; }
+.doc-lines .k::after { content: ":"; }
+.doc-lines .date { font-size: 15px; }
+.doc-links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; margin-top: 4px; }
+.doc-links a { color: var(--accent); text-underline-offset: 3px; }
+.doc details { margin-top: 2px; }
+.doc details summary { display: list-item; padding-block: 10px; line-height: 24px; font-size: 16px; font-style: italic; color: var(--muted); cursor: pointer; }
+.doc details p { margin: 0 0 6px; font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
+.chip { display: inline-block; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; border: 1px solid currentColor; border-radius: 0; padding: 0 6px; white-space: nowrap; }
+.chip.type-rule { color: var(--good); }
+.chip.type-proposed-rule { color: var(--accent); }
+.chip.type-notice, .chip.type-other { color: var(--muted); }
+.chip.type-presidential-document { color: var(--fg); }
+.chip.watch { color: var(--fg); border-color: var(--line); }
+.chip.sig { color: var(--warn); }
+.chip.due-hot { color: var(--bad); }
+.chip.due-warm { color: var(--warn); }
+.empty { color: var(--muted); font-size: 16px; font-style: italic; margin: 6px 0; }
+.status { margin: 0; font-size: 15px; color: var(--muted); }
+.status:empty { display: none; }
+textarea { width: 100%; min-height: 120px; font-family: var(--mono); font-size: 16px; background: var(--field); color: var(--fg); border: 1px solid var(--line); border-radius: 0; padding: 8px; margin-top: 8px; }
+.feeds { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 15px; }
+.feeds a { color: var(--accent); font-family: var(--mono); }
+.hidden { display: none !important; }
+
+/* Footer: colophon */
+footer { margin-top: 18px; border-top: 1px solid var(--fg); padding-top: 8px; font-size: 16px; color: var(--muted); }
+footer > p { margin: 0 0 4px; }
+.maker { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+details.method { margin-top: 12px; background: var(--surface); border-top: 1px solid var(--fg); border-bottom: 1px solid var(--hair); padding: 0 16px 6px; color: var(--fg); }
+details.method summary { display: list-item; padding-block: 10px; line-height: 24px; cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 1.15rem; font-variant: small-caps; text-transform: lowercase; letter-spacing: .05em; }
+details.method p, details.method li { font-size: 16px; line-height: 1.5; }
+details.method strong { font-variant: small-caps; text-transform: lowercase; letter-spacing: .03em; }
+code { font-family: var(--mono); font-size: 14px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+</style>
+<div class="wrap">
+<header>
+  <div class="mast">
+    <div class="vol"><span>Daily index of the Federal Register</span><span>Rules / Proposed Rules / Notices</span></div>
+    <h1>Reg Watch</h1>
+  </div>
+  <p class="lede"><b class="ri">Action:</b>Federal Register rules, proposed rules and notices for the agencies you watch, with comment deadlines up front.</p>
+  <p class="data-note" id="data-note">Loading data.</p>
+</header>
+
+<section class="panel" aria-labelledby="h-filters">
+  <div class="panel-head"><h2 id="h-filters">Filters</h2><span class="tag" id="data-tag">Example data</span></div>
+  <div class="grid">
+    <div class="field wide">
+      <label for="f-q">Keywords</label>
+      <input type="search" id="f-q" autocomplete="off" spellcheck="false" placeholder='pipeline -"special permits"'>
+      <p class="hint">Searches title, abstract, document number, dockets, RINs and agency names. Use quotes for a phrase and a minus sign to exclude.</p>
+    </div>
+    <div class="field">
+      <label for="f-agency">Agency</label>
+      <select id="f-agency"></select>
+    </div>
+    <div class="field">
+      <label for="f-type">Document type</label>
+      <select id="f-type">
+        <option value="">All types</option>
+        <option value="Rule">Rule</option>
+        <option value="Proposed Rule">Proposed Rule</option>
+        <option value="Notice">Notice</option>
+        <option value="Presidential Document">Presidential Document</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-from">Published from</label>
+      <input type="date" id="f-from">
+    </div>
+    <div class="field">
+      <label for="f-to">Published to</label>
+      <input type="date" id="f-to">
+    </div>
+  </div>
+  <div class="grid" style="margin-top:10px">
+    <div class="field wide">
+      <span class="lbl" id="lbl-view">View</span>
+      <div class="seg" role="radiogroup" aria-labelledby="lbl-view">
+        <label for="v-all"><input type="radio" name="view" id="v-all" value="all" checked><span>All documents</span></label>
+        <label for="v-closing"><input type="radio" name="view" id="v-closing" value="closing"><span id="v-closing-text">Comments closing in 14 days</span></label>
+      </div>
+    </div>
+    <div class="field">
+      <label for="f-ref">As of</label>
+      <input type="date" id="f-ref">
+    </div>
+    <div class="field">
+      <label for="f-window">Closing window (days)</label>
+      <input type="number" id="f-window" min="0" max="365" step="1" value="14" inputmode="numeric">
+    </div>
+    <div class="field">
+      <label for="f-sort">Sort</label>
+      <select id="f-sort">
+        <option value="newest">Newest first</option>
+        <option value="closing">Comment deadline first</option>
+      </select>
+    </div>
+  </div>
+  <div class="row-actions">
+    <button type="button" id="btn-reset">Reset filters</button>
+    <button type="button" id="btn-csv" class="primary">Copy results as CSV</button>
+    <span class="status" id="copy-status" role="status"></span>
+  </div>
+  <label for="csv-fallback" class="hidden" id="csv-fallback-label">CSV (select all and copy)</label>
+  <textarea id="csv-fallback" class="hidden" readonly></textarea>
+</section>
+
+<section class="panel" aria-labelledby="h-results">
+  <div class="panel-head"><h2 id="h-results">Documents</h2><span class="tag" id="res-tag"></span></div>
+  <div class="tiles">
+    <div class="tile"><div class="k">Matching documents</div><div class="v" id="t-count">0</div></div>
+    <div class="tile key"><div class="k" id="t-closing-k">Comments closing in 14 days</div><div class="v" id="t-closing">0</div></div>
+    <div class="tile"><div class="k">Rules and proposed rules</div><div class="v" id="t-rules">0</div></div>
+  </div>
+  <ol class="docs" id="results"></ol>
+  <p class="empty hidden" id="no-results">No documents match these filters.</p>
+  <div class="row-actions"><button type="button" id="btn-more" class="hidden">Show more</button><span class="status" id="shown-status"></span></div>
+</section>
+
+<section class="panel hidden" id="feeds-panel" aria-labelledby="h-feeds">
+  <h2 id="h-feeds">Atom feeds</h2>
+  <p class="hint" style="margin:0 0 8px">Subscribe in any feed reader. One feed for everything, one per agency.</p>
+  <div class="feeds" id="feeds"></div>
+</section>
+
+<footer>
+  <p>Built by Will Whitmire. Runs entirely in your browser; nothing you enter is uploaded.</p>
+  <p class="maker">W. Whitmire / Field Tools / No. 10</p>
+  <details class="method">
+    <summary>Method and limits</summary>
+    <p><strong>Source.</strong> The official Federal Register API (<code>federalregister.gov/api/v1</code>), which is public domain US government data and needs no key. Every item links to its page on federalregister.gov and its official PDF on govinfo.gov. Read the document itself before acting; this page is an index, not legal advice.</p>
+    <p><strong>Collection.</strong> A scheduled GitHub Action runs once a day, asks the API for documents published since the last run (minus a 3 day overlap to catch late indexing and corrections) for each watched agency, deduplicates by document number, keeps a rolling 365 days, and commits the result. Requests use small pages, a descriptive User-Agent and exponential backoff on HTTP 429 and 5xx.</p>
+    <ul>
+      <li><strong>Agency matching</strong> follows the API: a query for a department returns its sub-agencies too. Interior includes BSEE, BLM, BOEM, BIA, Fish and Wildlife and the rest. A joint rule appears under every watched agency that signed it.</li>
+      <li><strong>Comment deadline</strong> is the API field <code>comments_close_on</code>. Not every notice has one, some deadlines are stated only in the document text, and a later document can extend or reopen a comment period. The closing view counts deadlines from the "As of" date through that date plus the window, inclusive.</li>
+      <li><strong>Keyword search</strong> is a plain substring match on ASCII-lowercased text. Accented capitals are not folded (searching <code>emissions</code> does not match <code>&Eacute;missions</code>). No stemming: <code>permit</code> matches <code>permits</code>, but <code>permits</code> does not match <code>permit</code>.</li>
+      <li><strong>Dates</strong> are Federal Register publication dates (ISO, Eastern time as published). The "As of" date defaults to today on your device, or to the snapshot date when the page runs from a snapshot.</li>
+      <li><strong>Coverage</strong> is only the agencies in the repository's <code>config.json</code>. Abstracts are trimmed to 2,000 characters. Documents the API lists without a title, document number or valid publication date are skipped and logged.</li>
+      <li><strong>Exports</strong>: cells that start with <code>= + - @</code>, tab or carriage return get a leading single quote so spreadsheets do not run them as formulas.</li>
+    </ul>
+  </details>
+</footer>
+</div>
+
+<script id="snapshot" type="application/json">{"schema_version":1,"updated":"2026-10-21","retention_days":365,"agencies":[{"key":"CFTC","slug":"commodity-futures-trading-commission","label":"Commodity Futures Trading Commission","feed":"feed-cftc.xml"},{"key":"SEC","slug":"securities-and-exchange-commission","label":"Securities and Exchange Commission","feed":"feed-sec.xml"},{"key":"FERC","slug":"federal-energy-regulatory-commission","label":"Federal Energy Regulatory Commission","feed":"feed-ferc.xml"},{"key":"EPA","slug":"environmental-protection-agency","label":"Environmental Protection Agency","feed":"feed-epa.xml"},{"key":"PHMSA","slug":"pipeline-and-hazardous-materials-safety-administration","label":"Pipeline and Hazardous Materials Safety Administration","feed":"feed-phmsa.xml"},{"key":"BSEE","slug":"safety-and-environmental-enforcement-bureau","label":"Bureau of Safety and Environmental Enforcement","feed":"feed-bsee.xml"},{"key":"BLM","slug":"land-management-bureau","label":"Bureau of Land Management","feed":"feed-blm.xml"},{"key":"Interior","slug":"interior-department","label":"Department of the Interior","feed":"feed-interior.xml"}],"count":63,"documents":[{"document_number":"C1-2026-20311","title":"Potential Designation of Chartered Financial Analyst Designation as Qualifying Natural Persons for Accredited Investor Status","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/C1-2026-20311/potential-designation-of-chartered-financial-analyst-designation-as-qualifying-natural-persons-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/C1-2026-20311.pdf","docket_ids":["Release No. 33-11447","File No. 4-933"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21495","title":"Agency Information Collection Activities; Submission for OMB Review; Comment Request; Extension: Form N-2","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21495/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-form","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21495.pdf","docket_ids":["OMB Control No. 3235-0026"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21492","title":"Agency Information Collection Activities Under OMB Review","type":"Notice","agencies":[{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"}],"watch":["CFTC"],"publication_date":"2026-10-21","comments_close_on":"2026-11-20","effective_on":null,"abstract":"In compliance with the Paperwork Reduction Act of 1995 (\"PRA\"), this notice announces that the Information Collection Request (\"ICR\") abstracted below has been forwarded to the Office of Information and Regulatory Affairs (\"OIRA\"), of the Office of Management and Budget (\"OMB\"), for review and comment. The ICR describes the nature of the information collection and its expected costs and burden.","html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21492/agency-information-collection-activities-under-omb-review","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21492.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21490","title":"Combined Notice of Filings","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21490/combined-notice-of-filings","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21490.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21489","title":"Combined Notice of Filings #1","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21489/combined-notice-of-filings-1","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21489.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21487","title":"Combined Notice of Filings #2","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21487/combined-notice-of-filings-2","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21487.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21482","title":"Self-Regulatory Organizations; CME Securities Clearing Inc.; Notice of Filing of Proposed Rule Change To Amend the CMESC Risk Management Framework (“RMF”) Related to CMESC's Default Management Practices","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21482/self-regulatory-organizations-cme-securities-clearing-inc-notice-of-filing-of-proposed-rule-change","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21482.pdf","docket_ids":["Release No. 34-106681","File No. SR-CMESC-2026-011"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21481","title":"Self-Regulatory Organizations; Cboe EDGX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Rule 11.1(a)(3) To Describe When Unpriced Orders Are Eligible for Execution and To Amend Rule 11.6(q)(2) To Clarify the Expiration of Day Orders Entered During the Overnight Trading Session or Order Acceptance Queueing Time","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21481/self-regulatory-organizations-cboe-edgx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21481.pdf","docket_ids":["Release No. 34-106683","File No. SR-CboeEDGX-2026-071"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21480","title":"Self-Regulatory Organizations; Cboe Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Its Fees Schedule","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21480/self-regulatory-organizations-cboe-exchange-inc-notice-of-filing-and-immediate-effectiveness-of-a","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21480.pdf","docket_ids":["Release No. 34-106680","File No. SR-CBOE-2026-080"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21476","title":"Notice of Supplemented Documented Petition for Federal Acknowledgment as an American Indian Tribe","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Indian Affairs Bureau","slug":"indian-affairs-bureau"}],"watch":["Interior"],"publication_date":"2026-10-21","comments_close_on":"2027-02-18","effective_on":null,"abstract":"The Department of the Interior (Department) gives notice that the group known as the Juaneño Band of Mission Indians, Acjachemen Nation, a petitioner for Federal acknowledgment as an American Indian Tribe, has chosen to complete the petitioning process under the current version of the acknowledgment regulations and has supplemented its petition. The Juaneño Band of Mission Indians, Acjachemen Nation had been proceeding under a previous version of the regulations (as they existed prior to July 31, 2015). The Department seeks comments and evidence from the public on the supplemented petition.","html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21476/notice-of-supplemented-documented-petition-for-federal-acknowledgment-as-an-american-indian-tribe","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21476.pdf","docket_ids":["278A2100DD/AAKC001030/A0A501010.999900"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21475","title":"Indian Gaming; Extension of Tribal-State Class III Gaming Compact Between the Flandreau Santee Sioux Tribe and the State of South Dakota","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Indian Affairs Bureau","slug":"indian-affairs-bureau"}],"watch":["Interior"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":"2026-10-21","abstract":"This notice announces the extension of the Class III gaming compact between the Flandreau Santee Sioux Tribe and the State of South Dakota.","html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21475/indian-gaming-extension-of-tribal-state-class-iii-gaming-compact-between-the-flandreau-santee-sioux","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21475.pdf","docket_ids":["278A2100DDAAKE200000/A0A501010.000000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21473","title":"Ohkay Owingeh, New Mexico-Liquor Control Ordinance Amendment","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Indian Affairs Bureau","slug":"indian-affairs-bureau"}],"watch":["Interior"],"publication_date":"2026-10-21","comments_close_on":null,"effective_on":"2026-10-21","abstract":"This notice publishes amendments to the Ohkay Owingeh, New Mexico Liquor Control Ordinance, which amends and replaces the previous liquor control ordinance published on December 26, 1989.","html_url":"https://www.federalregister.gov/documents/2026/10/21/2026-21473/ohkay-owingeh-new-mexico-liquor-control-ordinance-amendment","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21473.pdf","docket_ids":["278A2100DD/AAMM001010/A0A600000.000000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21474","title":"Civil Penalties Inflation Adjustments; Annual Adjustments","type":"Rule","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Indian Affairs Bureau","slug":"indian-affairs-bureau"}],"watch":["Interior"],"publication_date":"2026-10-20","comments_close_on":null,"effective_on":"2026-10-20","abstract":"This rule provides for annual adjustments to the level of civil monetary penalties contained in Bureau of Indian Affairs (Bureau) regulations to account for inflation under the Federal Civil Penalties Inflation Adjustment Act Improvements Act of 2015 and Office of Management and Budget (OMB) guidance.","html_url":"https://www.federalregister.gov/documents/2026/10/20/2026-21474/civil-penalties-inflation-adjustments-annual-adjustments","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21474.pdf","docket_ids":["267A2100DD/AAKP3000000/A0A501010.000000"],"regulation_id_numbers":["1076-AF81"],"significant":null},{"document_number":"2026-21462","title":"American Samoa Outer Continental Shelf Pacific Mineral Lease Sale 1","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Ocean Energy Management Bureau","slug":"ocean-energy-management-bureau"}],"watch":["Interior"],"publication_date":"2026-10-20","comments_close_on":null,"effective_on":null,"abstract":"The Marine Minerals Administration (MMA) will conduct an auction for lease areas offered in the American Samoa Outer Continental Shelf (OCS) Pacific Mineral Lease Sale 1 (Lease Sale PACM-1), in accordance with the Outer Continental Shelf Lands Act (OCSLA), as amended, and its implementing regulations. The Final Leasing Notice (FLN) package for this lease sale contains information essential to potential bidders, including Information to Lessees and Lease Stipulations.","html_url":"https://www.federalregister.gov/documents/2026/10/20/2026-21462/american-samoa-outer-continental-shelf-pacific-mineral-lease-sale-1","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21462.pdf","docket_ids":["Docket No. BOEM-2026-0331"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21443","title":"Authorizations for Certain Activities at Liquefied Natural Gas Plants","type":"Proposed Rule","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-10-20","comments_close_on":"2026-12-21","effective_on":null,"abstract":"The Federal Energy Regulatory Commission proposes to revise its regulations to establish procedures for authorizing activities at liquefied natural gas plants without case-specific authorization orders under sections 3 or 7 of the Natural Gas Act.","html_url":"https://www.federalregister.gov/documents/2026/10/20/2026-21443/authorizations-for-certain-activities-at-liquefied-natural-gas-plants","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf","docket_ids":["Docket No. RM26-2-001"],"regulation_id_numbers":["1902-AG43"],"significant":null},{"document_number":"2026-21442","title":"Environmental Review of Natural Gas Act Applications; Notice of Availability of Draft Policy Statement on Efficient Environmental Reviews of Natural Gas Project Applications","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-10-20","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/20/2026-21442/environmental-review-of-natural-gas-act-applications-notice-of-availability-of-draft-policy","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21442.pdf","docket_ids":["Docket No. PL26-3-000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21383","title":"New Source Performance Standards and National Emission Standards for Hazardous Air Pollutants; Delegation of Authority to Northwest Clean Air Agency, Washington State","type":"Proposed Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"The Northwest Clean Air Agency (NWCAA), located in Washington State, submitted updated regulations for receiving delegation and approval of its program for the implementation and enforcement of newly issued or revised New Source Performance Standards (NSPS) and National Emission Standards for Hazardous Air Pollutants (NESHAP), as provided for under previously approved delegation mechanisms. The updated regulations incorporate by reference certain NSPS and NESHAP promulgated by the Environmental Protection Agency (EPA) as they existed through October 18, 2023. The EPA is providing notice that it is proposing to update the delegation of certain NSPS and approve the delegation of certain NESHAP to NWCAA. The proposed delegation of authority under this action does not apply to sources located in Indian country.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21383/new-source-performance-standards-and-national-emission-standards-for-hazardous-air-pollutants","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21383.pdf","docket_ids":["EPA-R10-OAR-2026-4291, FRL-13409-01-R10"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21377","title":"Further Definition of “Swap”-Inclusions","type":"Proposed Rule","agencies":[{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"}],"watch":["CFTC"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"Consistent with its jurisdiction over swaps, the Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is proposing to further define the term \"swap\" to explicitly include event contracts, including those based on sports-, politics-, cultural-, and weather- related events (the \"Proposal\").","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21377/further-definition-of-swap-inclusions","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21377.pdf","docket_ids":[],"regulation_id_numbers":["3038-AF82"],"significant":null},{"document_number":"2026-21376","title":"Further Definition of “Swap” To Exclude Casino-Style Gambling Products","type":"Rule","agencies":[{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"}],"watch":["CFTC"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":"2026-10-19","abstract":"The Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is adopting an interim final rule (\"Interim Final Rule\") to codify its longstanding position that casino-style gambling products, including wagers placed on sportsbooks and casino games, are excluded from the \"swap\" definition.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21376/further-definition-of-swap-to-exclude-casino-style-gambling-products","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21376.pdf","docket_ids":[],"regulation_id_numbers":["3038-AF81"],"significant":null},{"document_number":"2026-21308","title":"Hazardous Materials: Notice of Actions on Special Permits","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has granted or denied the application described herein.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21308/hazardous-materials-notice-of-actions-on-special-permits","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21308.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21307","title":"Hazardous Materials: Notice of Applications for Modification to Special Permits","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-03","effective_on":null,"abstract":"In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21307/hazardous-materials-notice-of-applications-for-modification-to-special-permits","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21307.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21306","title":"Hazardous Materials: Notice of Applications for New Special Permits","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21306/hazardous-materials-notice-of-applications-for-new-special-permits","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21306.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21289","title":"Air Quality Plan; Arizona; Agricultural Best Management Practices Rules for the West Pinal County PM10 Nonattainment Area","type":"Proposed Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"The U.S. Environmental Protection Agency (EPA) is proposing to approve a revision to the Arizona Department of Environmental Quality (ADEQ or \"State\") portion of the Arizona State Implementation Plan (SIP). This revision concerns emissions of particulate matter (PM) that are 10 micrometers (µm) or smaller in diameter (PM10) from agricultural crop and animal operations in the West Pinal County PM10 nonattainment area. We are proposing to approve two local rules to regulate these emission sources under the Clean Air Act (CAA or \"Act\").","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21289/air-quality-plan-arizona-agricultural-best-management-practices-rules-for-the-west-pinal-county-pm10","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21289.pdf","docket_ids":["EPA-R09-OAR-2024-0600","FRL-13422-01-R9"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21288","title":"Approval and Promulgation of Implementation Plans-Pinal County (Part); West Pinal, AZ PM10 Nonattainment Area; Moderate Area, Serious Area, and Section 189(d) Plan for Attainment of the 24-Hour PM10 Standard","type":"Proposed Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"The U.S. Environmental Protection Agency (EPA) is proposing to approve a state implementation plan (SIP) revision submitted by the State of Arizona to meet Clean Air Act (CAA or \"Act\") requirements applicable to the Pinal County (Part); West Pinal PM10 nonattainment area (\"West Pinal County PM10 Nonattainment Area\"). The EPA is proposing to find that the submitted SIP revision meets all applicable \"Moderate\" area, \"Serious\" area, and CAA section 189(d) requirements for the PM10 national ambient air quality standards (NAAQS). Additionally, the EPA is proposing to approve the PM10 motor vehicle emissions budgets included with the SIP revision for transportation conformity purposes. The EPA is also starting the adequacy process for these budgets. Our proposed approval of the SIP revision would establish an attainment date of December 31, 2026, for the area.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21288/approval-and-promulgation-of-implementation-plans-pinal-county-part-west-pinal-az-pm10-nonattainment","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21288.pdf","docket_ids":["EPA-R09-OAR-2026-5119","FRL-13482-01-R9"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21287","title":"Air Quality Plan; Arizona; Pinal County Air Quality Control District; West Pinal County PM10 Nonattainment Area; Fugitive Dust Rules","type":"Proposed Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-10-19","comments_close_on":"2026-11-18","effective_on":null,"abstract":"The U.S. Environmental Protection Agency (EPA) is proposing to approve revisions to the Pinal County Air Quality Control District (PCAQCD or \"District\") portion of the Arizona State Implementation Plan (SIP). These revisions concern emissions of particulate matter (PM) that is 10 micrometers or smaller in diameter (PM10) from fugitive dust sources, including open areas/vacant lots, unpaved lots, unpaved roads, paved public roadways, and construction sites. We are proposing to approve local rules to regulate these emission sources under the Clean Air Act (CAA or \"Act\").","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21287/air-quality-plan-arizona-pinal-county-air-quality-control-district-west-pinal-county-pm10","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21287.pdf","docket_ids":["EPA-R09-OAR-2026-5581","FRL-13513-01-R9"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21275","title":"Agency Information Collection Activities: Notice of Intent To Extend Collection 3038-0093, Part 40, Provisions Common to Registered Entities","type":"Notice","agencies":[{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"}],"watch":["CFTC"],"publication_date":"2026-10-19","comments_close_on":"2026-12-18","effective_on":null,"abstract":"The Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is announcing an opportunity for public comment on the proposed renewal of a collection of certain information by the agency. Under the Paperwork Reduction Act (\"PRA\"), Federal agencies are required to publish notice in the Federal Register concerning each proposed collection of information, including each proposed extension of an existing collection of information, and to allow 60 days for public comment. This notice solicits comments on collections of information provided for by Part 40 of the Commission's regulations, Provisions Common to Registered Entities.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21275/agency-information-collection-activities-notice-of-intent-to-extend-collection-3038-0093-part-40","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21275.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21268","title":"Approval and Promulgation of Implementation Plans; Arizona; Revisions to the Cleaner Burning Gasoline, Winter Oxygenated Fuel, and Gasoline Set-Aside Programs","type":"Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-10-19","comments_close_on":null,"effective_on":"2026-11-18","abstract":"The U.S. Environmental Protection Agency (EPA) is finalizing an approval of a revision to the Arizona State Implementation Plan (SIP) submitted by the Arizona Department of Environmental Quality (ADEQ). This revision includes statutes and regulations amending the Cleaner Burning Gasoline (CBG) program, which is a control measure in the greater Phoenix metropolitan area to reduce emissions of ozone- forming pollutants, carbon monoxide (CO), and particulate matter. Additionally, this revision addresses the Winter Oxygenated Fuel program to control CO emissions in the Tucson area. Finally, this revision repeals the Arizona Gasoline Set-aside (GSA) Program, applicable to the 1971 carbon monoxide nonattainment area covering Maricopa County and a portion of Pima County. This SIP revision is administrative in nature. This final action updates the existing SIP- approved CBG program with revisions that have been adopted and implemented by the State to clarify requirements, update references, and enhance flexibility of the program and will not impose any additional costs or regulatory burdens.","html_url":"https://www.federalregister.gov/documents/2026/10/19/2026-21268/approval-and-promulgation-of-implementation-plans-arizona-revisions-to-the-cleaner-burning-gasoline","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21268.pdf","docket_ids":["EPA-R09-OAR-2023-0054","FRL-12607-02-R9"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21182","title":"Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Well Operations and Equipment","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Safety and Environmental Enforcement Bureau","slug":"safety-and-environmental-enforcement-bureau"}],"watch":["Interior","BSEE"],"publication_date":"2026-10-16","comments_close_on":"2026-11-16","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection with revisions.","html_url":"https://www.federalregister.gov/documents/2026/10/16/2026-21182/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21182.pdf","docket_ids":["Docket ID BSEE-2026-0067","EEEE500000 256E1700D2 ET1SF0000.EAQ000","OMB Control Number 1014-0028"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-21158","title":"Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Application for Permit To Drill (APD, Revised APD), Supplemental APD Information Sheet, and All Supporting Documentation","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Safety and Environmental Enforcement Bureau","slug":"safety-and-environmental-enforcement-bureau"}],"watch":["Interior","BSEE"],"publication_date":"2026-10-16","comments_close_on":"2026-11-16","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.","html_url":"https://www.federalregister.gov/documents/2026/10/16/2026-21158/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21158.pdf","docket_ids":["Docket ID BSEE-2025-0299","EEEE500000-256E1700D2-ET1SF0000.EAQ000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20888","title":"Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets","type":"Proposed Rule","agencies":[{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"}],"watch":["CFTC"],"publication_date":"2026-10-13","comments_close_on":"2026-12-14","effective_on":null,"abstract":"The Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is issuing an advanced notice of proposed rulemaking regarding section 2(c)(2)(D) of the Commodity Exchange Act (\"CEA\" or \"Act\") to provide notice and seek public comment on its intent to develop and establish fit-for-purpose rules implementing section 2(c)(2)(D) of the Act with respect to transactions and markets in crypto assets.","html_url":"https://www.federalregister.gov/documents/2026/10/13/2026-20888/regulation-crypto-asset-transactions-and-regulation-crypto-asset-markets","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-13/pdf/2026-20888.pdf","docket_ids":[],"regulation_id_numbers":["3038-AF80"],"significant":null},{"document_number":"2026-20772","title":"DPP Investors 2025 LP and DLA Piper LLP (US)","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-09","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/09/2026-20772/dpp-investors-2025-lp-and-dla-piper-llp-us","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20772.pdf","docket_ids":["Investment Company Act Release No. 36356","File No. 813-00421"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20714","title":"Cboe Clear U.S., LLC; Notice of Filing of an Amendment to Application for Registration as a Clearing Agency Under Section 17A of the Securities Exchange Act of 1934","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-09","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/09/2026-20714/cboe-clear-us-llc-notice-of-filing-of-an-amendment-to-application-for-registration-as-a-clearing","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20714.pdf","docket_ids":["Release No. 34-106610","File No. 600-47"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20713","title":"Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the NYSE Arca Options Proprietary Market Data Fee Schedule To Adopt Fees for One-Minute Intra-Day Volume Reports","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-09","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/09/2026-20713/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-and-immediate-effectiveness-of-a","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20713.pdf","docket_ids":["Release No. 34-106609","File No. SR-NYSEARCA-2026-102"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20712","title":"Self-Regulatory Organizations; NYSE American LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the NYSE American Options Proprietary Market Data Fee Schedule To Adopt Fees for One-Minute Intra-Day Volume Reports","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-09","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/09/2026-20712/self-regulatory-organizations-nyse-american-llc-notice-of-filing-and-immediate-effectiveness-of-a","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20712.pdf","docket_ids":["Release No. 34-106608","File No. SR-NYSEAMER-2026-89"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20711","title":"Self-Regulatory Organizations; The Nasdaq Stock Market LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the Exchange's Transaction Fees at Nasdaq Equity 7, Section 118, To Establish a Tier of Credit for Non-Displayed Orders (Other Than Supplemental Orders) That Provide Liquidity","type":"Notice","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-10-09","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/10/09/2026-20711/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20711.pdf","docket_ids":["Release No. 34-106607","File No. SR-NASDAQ-2026-086"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20342","title":"Agency Information Collection Activities; Oil and Gas Production Requirements","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Safety and Environmental Enforcement Bureau","slug":"safety-and-environmental-enforcement-bureau"}],"watch":["Interior","BSEE"],"publication_date":"2026-10-05","comments_close_on":"2026-12-04","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.","html_url":"https://www.federalregister.gov/documents/2026/10/05/2026-20342/agency-information-collection-activities-oil-and-gas-production-requirements","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20342.pdf","docket_ids":["Docket ID BSEE-2026-0265","EEEE500000-256E1700D2-ET1SF0000.EAQ000","OMB Control Number 1014-0019"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-20337","title":"Agency Information Collection Activities; General","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Safety and Environmental Enforcement Bureau","slug":"safety-and-environmental-enforcement-bureau"}],"watch":["Interior","BSEE"],"publication_date":"2026-10-05","comments_close_on":"2026-12-04","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.","html_url":"https://www.federalregister.gov/documents/2026/10/05/2026-20337/agency-information-collection-activities-general","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20337.pdf","docket_ids":["Docket ID BSEE-2026-0298","EEEE500000-256E1700D2-ET1SF0000.EAQ000","OMB Control Number 1014-0022"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-19293","title":"Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Decommissioning Activities","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Safety and Environmental Enforcement Bureau","slug":"safety-and-environmental-enforcement-bureau"}],"watch":["Interior","BSEE"],"publication_date":"2026-09-22","comments_close_on":"2026-10-22","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.","html_url":"https://www.federalregister.gov/documents/2026/09/22/2026-19293/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19293.pdf","docket_ids":["Docket ID BSEE-2025-0233","EEEE500000-256E1700D2-ET1SF0000.EAQ000","OMB Control Number 1014-0010"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-18104","title":"Form PF; Reporting Requirements for All Filers and Large Hedge Fund Advisers; Further Extension of Compliance Date","type":"Rule","agencies":[{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"},{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["CFTC","SEC"],"publication_date":"2026-09-03","comments_close_on":null,"effective_on":"2026-09-03","abstract":"The Commodity Futures Trading Commission (the \"CFTC\") and the Securities and Exchange Commission (the \"SEC\") (collectively, \"we\" or the \"Commissions\") are further extending the compliance date for the amendments to Form PF that were adopted on February 8, 2024, from October 1, 2026, to July 1, 2027. Form PF is the confidential reporting form for certain SEC-registered investment advisers to private funds, including those that also are registered with the CFTC as a commodity pool operator (a \"CPO\") or a commodity trading adviser (a \"CTA\").","html_url":"https://www.federalregister.gov/documents/2026/09/03/2026-18104/form-pf-reporting-requirements-for-all-filers-and-large-hedge-fund-advisers-further-extension-of","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-09-03/pdf/2026-18104.pdf","docket_ids":["Release No. IA-6992","File No. S7-22-22"],"regulation_id_numbers":["3038-AF31","3235-AN13"],"significant":false},{"document_number":"2026-17890","title":"Pipeline Safety: Joint Meeting of the Gas and Liquid Pipeline Advisory Committees","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-09-01","comments_close_on":"2026-09-04","effective_on":null,"abstract":"On July 17, 2026, PHMSA published a Federal Register notice titled: \"Pipeline Safety: Joint Meeting of the Gas and Liquid Pipeline Advisory Committees,\" which provided an opportunity for public comment by August 31, 2026, on the proceedings of the Gas and Liquid Pipeline Advisory Committees meeting related to 13 notices of proposed rulemakings (NPRM). These proposed rules covered topics such as special permit conditions, in-plant piping, incidental gathering lines, coating damage assessments, atmospheric corrosion, class change pressure tests, maximum allowable operating pressure reconfirmation, operator identification notifications, limitations on welding, remote valves, the property damage definition, right-of-way patrols, and reporting deadlines. PHMSA received requests from stakeholders to extend the comment period. Based on those requests, PHMSA is reopening the comment period for the joint Pipeline Advisory Committee (PAC) proceedings related to the 13 regulatory modernizing NPRMs to September 4, 2026.","html_url":"https://www.federalregister.gov/documents/2026/09/01/2026-17890/pipeline-safety-joint-meeting-of-the-gas-and-liquid-pipeline-advisory-committees","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-09-01/pdf/2026-17890.pdf","docket_ids":["Docket No. PHMSA-2026-1156"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17606","title":"Environmental Impact Statements; Notice of Availability","type":"Notice","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-08-28","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/08/28/2026-17606/environmental-impact-statements-notice-of-availability","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-28/pdf/2026-17606.pdf","docket_ids":["FRL OPRM-FAD-237"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17579","title":"Alpha-d-Glucopyranoside, Beta-d-Fructofuranosyl, Mixed Palmitates and Stearates in Pesticide Formulations; Exemption From the Requirement of a Tolerance","type":"Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-08-28","comments_close_on":null,"effective_on":"2026-08-28","abstract":"This regulation establishes an exemption from the requirement of a tolerance for residues of alpha-d-glucopyranoside, beta-d- fructofuranosyl, mixed palmitates and stearates (CAS Reg. No. 84066-95- 5) when used as an inert ingredient (surfactant) on growing crops pre- harvest at no more than 12% of the final pesticide formulation. Elicit Plant S.A.S submitted a petition to EPA under the Federal Food, Drug, and Cosmetic Act (FFDCA), requesting establishment of an exemption from the requirement of a tolerance. This regulation eliminates the need to establish a maximum permissible level for residues of alpha-d- glucopyranoside, beta-d-fructofuranosyl, mixed palmitates and stearates, when used in accordance with the terms of this exemption.","html_url":"https://www.federalregister.gov/documents/2026/08/28/2026-17579/alpha-d-glucopyranoside-beta-d-fructofuranosyl-mixed-palmitates-and-stearates-in-pesticide","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-28/pdf/2026-17579.pdf","docket_ids":["EPA-HQ-OPP-2025-0286","FRL-13571-01-OCSPP"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17506","title":"Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Confidential Business Information Claims Under the Toxic Substances Control Act (TSCA) (Renewal)","type":"Notice","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-08-27","comments_close_on":"2026-09-28","effective_on":null,"abstract":"The Environmental Protection Agency (EPA) has submitted an information collection request (ICR), Confidential Business Information Claims under the Toxic Substances Control Act (TSCA) (EPA ICR Number 2706.03, OMB Control Number 2070-0223) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act. This is a proposed extension of the ICR, which is currently approved through August 31, 2026. Public comments were previously requested via the Federal Register on April 27, 2026 during a 60-day comment period. This notice allows for an additional 30 days for public comments.","html_url":"https://www.federalregister.gov/documents/2026/08/27/2026-17506/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17506.pdf","docket_ids":["EPA-EPA-HQ-OPPT-2025-3955","FRL-13606-01-OFA"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17504","title":"Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Performance Evaluation Studies on Wastewater Laboratories (Renewal)","type":"Notice","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-08-27","comments_close_on":"2026-09-28","effective_on":null,"abstract":"The Environmental Protection Agency (EPA) has submitted an information collection request (ICR), Performance Evaluation Studies on Wastewater Laboratories (EPA ICR Number 0234.15, OMB Control Number 2080-0021) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act. This is a proposed extension of the ICR, which is currently approved through August 31, 2026. Public comments were previously requested via the Federal Register on May 21, 2026 during a 60-day comment period. This notice allows for an additional 30 days for public comments.","html_url":"https://www.federalregister.gov/documents/2026/08/27/2026-17504/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17504.pdf","docket_ids":["EPA-HQ-OECA-2013-0547","FRL-13607-01-OFA"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17503","title":"Air Plan Approval; Mississippi; 2010 1-Hour SO2 NAAQS Transport Infrastructure","type":"Proposed Rule","agencies":[{"name":"Environmental Protection Agency","slug":"environmental-protection-agency"}],"watch":["EPA"],"publication_date":"2026-08-27","comments_close_on":"2026-09-17","effective_on":null,"abstract":"Pursuant to the Federal Clean Air Act (CAA or the Act), the U.S. Environmental Protection Agency (EPA or Agency) is proposing to approve a State Implementation Plan (SIP) revision submitted by the State of Mississippi, through the Mississippi Department of Environmental Quality (MDEQ), on January 27, 2022, for the purpose of complying with the \"good neighbor\" provision of the CAA for the 2010 1-hour sulfur dioxide (SO2) primary National Ambient Air Quality Standard (NAAQS). The good neighbor provision requires each State's implementation plan to contain adequate provisions prohibiting the interstate transport of air pollution in amounts that will contribute significantly to nonattainment, or interfere with maintenance, of a NAAQS in any other State. In this proposed rulemaking, the EPA is proposing to determine that Mississippi will not contribute significantly to nonattainment or interfere with maintenance of the 2010 1-hour SO2 primary NAAQS in any other State. Therefore, the EPA is proposing to approve the January 27, 2022, SIP revision as meeting the requirements of the good neighbor provision for the 2010 1-hour SO2 primary NAAQS.","html_url":"https://www.federalregister.gov/documents/2026/08/27/2026-17503/air-plan-approval-mississippi-2010-1-hour-so2-naaqs-transport-infrastructure","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17503.pdf","docket_ids":["EPA-R04-OAR-2023-0227","FRL-13502-01-R4"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17257","title":"Bangor-Pacific Hydro Associates; Notice of Reasonable Period of Time for Water Quality Certification Application","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-08-24","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/08/24/2026-17257/bangor-pacific-hydro-associates-notice-of-reasonable-period-of-time-for-water-quality-certification","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17257.pdf","docket_ids":["Project No. 2600-088"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17246","title":"Combined Notice of Filings #1","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-08-24","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/08/24/2026-17246/combined-notice-of-filings-1","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17246.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17245","title":"Combined Notice of Filings","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-08-24","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/08/24/2026-17245/combined-notice-of-filings","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17245.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17243","title":"Natural Gas Pipeline Company of America LLC; Horizon Pipeline Company, L.L.C.; Notice of Application and Establishing Intervention Deadline","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-08-24","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/08/24/2026-17243/natural-gas-pipeline-company-of-america-llc-horizon-pipeline-company-llc-notice-of-application-and","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17243.pdf","docket_ids":["Docket No. CP26-564-000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17105","title":"Brookfield White Pine LLC; Notice of Application for Temporary Variance Accepted for Filing, Soliciting Comments, Motions To Intervene, and Protests","type":"Notice","agencies":[{"name":"Energy Department","slug":"energy-department"},{"name":"Federal Energy Regulatory Commission","slug":"federal-energy-regulatory-commission"}],"watch":["FERC"],"publication_date":"2026-08-21","comments_close_on":null,"effective_on":null,"abstract":null,"html_url":"https://www.federalregister.gov/documents/2026/08/21/2026-17105/brookfield-white-pine-llc-notice-of-application-for-temporary-variance-accepted-for-filing","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17105.pdf","docket_ids":["Project No. 2194-049"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-17018","title":"Filing Plats of Survey; New Mexico, Oklahoma","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Land Management Bureau","slug":"land-management-bureau"}],"watch":["Interior","BLM"],"publication_date":"2026-08-20","comments_close_on":null,"effective_on":null,"abstract":"The plats of survey and the supplemental plat of the following described lands are scheduled to be officially filed 30 calendar days after the date of this publication in the Bureau of Land Management (BLM) New Mexico State Office. The surveys and plat announced in this notice are necessary for the management of these lands.","html_url":"https://www.federalregister.gov/documents/2026/08/20/2026-17018/filing-plats-of-survey-new-mexico-oklahoma","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-17018.pdf","docket_ids":["A2407-014-004-065516, #O2509-014-004-125222","LLNM931000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-16992","title":"Agency Information Collection Activities; Coal Management","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Land Management Bureau","slug":"land-management-bureau"}],"watch":["Interior","BLM"],"publication_date":"2026-08-20","comments_close_on":"2026-10-19","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act of 1995 (PRA), the Bureau of Land Management (BLM) proposes extending an expiring information collection.","html_url":"https://www.federalregister.gov/documents/2026/08/20/2026-16992/agency-information-collection-activities-coal-management","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16992.pdf","docket_ids":["A2407-014-004-065516, #O2509-014-004-125222","LLHQ320000L13200000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-16527","title":"Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Information Required To Cross Private Land for Access to BLM Lands","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Land Management Bureau","slug":"land-management-bureau"}],"watch":["Interior","BLM"],"publication_date":"2026-08-13","comments_close_on":"2026-09-14","effective_on":null,"abstract":"In accordance with the Paperwork Reduction Act of 1995 (PRA), the Bureau of Land Management (BLM) is requesting approval for a new information collection.","html_url":"https://www.federalregister.gov/documents/2026/08/13/2026-16527/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-13/pdf/2026-16527.pdf","docket_ids":["A2407-014-004-065516, #O2509-014-004-125222","LLHQ/LLNMP01000"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-16295","title":"Public Land Order No. 7969; Withdrawal Revocation Calcasieu Radio Beacon Station, Calcasieu, Cameron Parish, Louisiana","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Land Management Bureau","slug":"land-management-bureau"}],"watch":["Interior","BLM"],"publication_date":"2026-08-11","comments_close_on":null,"effective_on":"2026-08-11","abstract":"This order revokes a withdrawal created by an Executive Order dated November 22, 1875, which reserved land at the mouth of the Calcasieu River in Louisiana for lighthouse purposes. The approximately 2.97-acres identified for return to the public domain has been managed for lighthouse purposes since 1875. The public land was closed to the general land laws and location and entry under the United States mining laws. The Bureau of Land Management (BLM) has evaluated the land and determined it is suitable for return to the public domain.","html_url":"https://www.federalregister.gov/documents/2026/08/11/2026-16295/public-land-order-no-7969-withdrawal-revocation-calcasieu-radio-beacon-station-calcasieu-cameron","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16295.pdf","docket_ids":["A2407-014-004-065515","O2509-014-004-125222","LLESJ0000","LAES-106743780"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-16111","title":"Hazardous Materials: Allowing Fireworks Certification Agencies (FCAs) To Approve Professional Fireworks","type":"Rule","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-08-07","comments_close_on":null,"effective_on":"2026-09-08","abstract":"This final rule expands the authority of a Fireworks Certification Agency (FCA) to obtain the ability to approve fireworks constructed to certain requirements. These amendments will streamline PHMSA's fireworks approval process and provide the industry with improved regulatory flexibility.","html_url":"https://www.federalregister.gov/documents/2026/08/07/2026-16111/hazardous-materials-allowing-fireworks-certification-agencies-fcas-to-approve-professional-fireworks","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16111.pdf","docket_ids":["Docket No. PHMSA-2025-0105 (HM-268Q)"],"regulation_id_numbers":["2137-AG19"],"significant":false},{"document_number":"2026-16072","title":"Proposed Reinstatement of Terminated Oil and Gas Lease WYW179793, Wyoming","type":"Notice","agencies":[{"name":"Interior Department","slug":"interior-department"},{"name":"Land Management Bureau","slug":"land-management-bureau"}],"watch":["Interior","BLM"],"publication_date":"2026-08-06","comments_close_on":null,"effective_on":null,"abstract":"In accordance with the Mineral Leasing Act of 1920, as amended, the Bureau of Land Management (BLM) received a petition for reinstatement of terminated competitive oil and gas lease WYW179793 in Converse County, Wyoming. The lessee filed the petition for reinstatement on time and has met all filing requirements. No leases were issued that affect these lands. The Bureau of Land Management proposes to reinstate the lease.","html_url":"https://www.federalregister.gov/documents/2026/08/06/2026-16072/proposed-reinstatement-of-terminated-oil-and-gas-lease-wyw179793-wyoming","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16072.pdf","docket_ids":["A2407-014-004-065516, #O2509-014-004-125222","LLWY920000. L57000000.FI0000. 17XL5017AR"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-16066","title":"Investment Company Governance Technical Amendments","type":"Rule","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-08-06","comments_close_on":null,"effective_on":"2026-08-06","abstract":"The Securities and Exchange Commission (the \"Commission\") is adopting technical amendments to a rule under the Investment Company Act of 1940 (the \"Investment Company Act\") related to registered investment company and business development company (collectively \"regulated funds\") governance standards to reflect a Federal court's vacatur of certain amendments to those standards that the Commission adopted on July 27, 2004. The court's vacatur of the amendments was effective as of July 6, 2006, and had the legal effect of reverting the fund governance standards to those standards in effect before adoption of the vacated requirements. These technical amendments revise the Code of Federal Regulations (the \"CFR\") to reflect the court's vacatur.","html_url":"https://www.federalregister.gov/documents/2026/08/06/2026-16066/investment-company-governance-technical-amendments","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16066.pdf","docket_ids":["Release No. IC-36282"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-15973","title":"Hazardous Materials: Notice of Actions on Special Permits","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-08-06","comments_close_on":"2026-09-08","effective_on":null,"abstract":"In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has granted or denied the application described herein.","html_url":"https://www.federalregister.gov/documents/2026/08/06/2026-15973/hazardous-materials-notice-of-actions-on-special-permits","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15973.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-15972","title":"Hazardous Materials: Notice of Applications for Modification to Special Permits","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-08-06","comments_close_on":"2026-08-21","effective_on":null,"abstract":"In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.","html_url":"https://www.federalregister.gov/documents/2026/08/06/2026-15972/hazardous-materials-notice-of-applications-for-modification-to-special-permits","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15972.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-15971","title":"Hazardous Materials: Notice of Applications for New Special Permits","type":"Notice","agencies":[{"name":"Transportation Department","slug":"transportation-department"},{"name":"Pipeline and Hazardous Materials Safety Administration","slug":"pipeline-and-hazardous-materials-safety-administration"}],"watch":["PHMSA"],"publication_date":"2026-08-06","comments_close_on":"2026-09-08","effective_on":null,"abstract":"In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.","html_url":"https://www.federalregister.gov/documents/2026/08/06/2026-15971/hazardous-materials-notice-of-applications-for-new-special-permits","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15971.pdf","docket_ids":[],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-14540","title":"Modernization of Delegations of Authority to Commission Staff","type":"Rule","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-07-20","comments_close_on":null,"effective_on":"2026-07-26","abstract":"The Securities and Exchange Commission (the \"Commission\") is amending its rules delegating authority to the Commission's staff to further modernize these rules, to better reflect the way the Commission conducts its business, and to more efficiently use the Commission's resources.","html_url":"https://www.federalregister.gov/documents/2026/07/20/2026-14540/modernization-of-delegations-of-authority-to-commission-staff","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-07-20/pdf/2026-14540.pdf","docket_ids":["Release Nos. 33-11431","34-105923","IC-36254","IA-6981"],"regulation_id_numbers":[],"significant":null},{"document_number":"2026-12787","title":"Financial Data Transparency Act Joint Data Standards","type":"Rule","agencies":[{"name":"Treasury Department","slug":"treasury-department"},{"name":"Comptroller of the Currency","slug":"comptroller-of-the-currency"},{"name":"Federal Reserve System","slug":"federal-reserve-system"},{"name":"Federal Deposit Insurance Corporation","slug":"federal-deposit-insurance-corporation"},{"name":"National Credit Union Administration","slug":"national-credit-union-administration"},{"name":"Consumer Financial Protection Bureau","slug":"consumer-financial-protection-bureau"},{"name":"Federal Housing Finance Agency","slug":"federal-housing-finance-agency"},{"name":"Commodity Futures Trading Commission","slug":"commodity-futures-trading-commission"},{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["CFTC","SEC"],"publication_date":"2026-06-25","comments_close_on":null,"effective_on":"2026-10-01","abstract":"The OCC, Board, FDIC, NCUA, CFPB, FHFA, CFTC, SEC, and Treasury are publishing a final joint rule to establish data standards to promote interoperability of financial regulatory data across these agencies. The standards established pursuant to this joint rule will later be considered for potential incorporation (to the extent feasible) into data standards to be adopted for certain collections of information in separate rulemakings by the agencies or through other actions taken by the agencies. At the effective date, the joint rule will not change any reporting requirements without further action by the agencies. The agencies are publishing this joint rule as required by the Financial Data Transparency Act of 2022.","html_url":"https://www.federalregister.gov/documents/2026/06/25/2026-12787/financial-data-transparency-act-joint-data-standards","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12787.pdf","docket_ids":["Docket ID OCC-2024-0012","Docket No. R-1837","Docket No. CFPB-2024-0034","Release No. 33-11420","34-105536","IA-6967","IC-36163","File No. S7-2024-05","Docket No. TREAS-DO-2024-0008"],"regulation_id_numbers":["1505-AC86","1557-AF22","2590-AB38","3038-AF43","3064-AF96","3133-AF70","3170-AB20","3235-AN32","7100 AG79"],"significant":true},{"document_number":"2026-12779","title":"Technical Amendments to Form X-17A-5 Part IIA","type":"Rule","agencies":[{"name":"Securities and Exchange Commission","slug":"securities-and-exchange-commission"}],"watch":["SEC"],"publication_date":"2026-06-25","comments_close_on":null,"effective_on":"2026-06-25","abstract":"The Securities and Exchange Commission is adopting technical amendments to Form X-17A-5 (\"FOCUS Report\") Part IIA under the Securities Exchange Act of 1934 (\"Exchange Act\").","html_url":"https://www.federalregister.gov/documents/2026/06/25/2026-12779/technical-amendments-to-form-x-17a-5-part-iia","pdf_url":"https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12779.pdf","docket_ids":["Release No. 34-105746"],"regulation_id_numbers":[],"significant":null}]}</script>
+
+<script id="core">
+"use strict";
+// Pure functions, no DOM. Mirrors src/reg_watch/filters.py; checked by web/parity.test.mjs.
+var WS_RUN = /[ \t\n\r\f\v]+/g;
+var TERM_SRC = '(-?)"([^"]*)"|([^ \\t\\n\\r\\f\\v]+)';
+var ISO_RE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+var DOCNUM_RE = /^[A-Za-z0-9][A-Za-z0-9-]{2,39}$/;
+var TYPES_ALL = ["Rule", "Proposed Rule", "Notice", "Presidential Document", "Other"];
+var URL_PREFIXES = ["https://www.federalregister.gov/", "https://federalregister.gov/", "https://www.govinfo.gov/", "https://govinfo.gov/"];
+var MAX_DOCS = 100000;
+var CSV_COLUMNS = ["document_number", "publication_date", "type", "watch", "title", "comments_close_on", "effective_on", "docket_ids", "html_url"];
+
+function squash(s) { return s.replace(WS_RUN, " ").replace(/^ | $/g, ""); }
+function fold(s) { return s.replace(/[A-Z]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) + 32); }); }
+
+function parseQuery(q) {
+  var inc = [], exc = [];
+  if (typeof q !== "string") return { include: inc, exclude: exc };
+  var re = new RegExp(TERM_SRC, "g"), m;
+  while ((m = re.exec(q)) !== null) {
+    var neg, term;
+    if (m[3] !== undefined) {
+      var raw = m[3];
+      neg = raw.charAt(0) === "-" && raw.length > 1;
+      term = neg ? raw.slice(1) : raw;
+    } else {
+      neg = m[1] === "-";
+      term = m[2];
+    }
+    term = squash(fold(term));
+    if (!term) continue;
+    var target = neg ? exc : inc;
+    if (target.indexOf(term) < 0) target.push(term);
+  }
+  return { include: inc, exclude: exc };
+}
+
+function haystack(doc) {
+  var parts = [doc.title || "", doc.abstract || "", doc.document_number || ""];
+  parts = parts.concat(doc.docket_ids || [], doc.regulation_id_numbers || []);
+  (doc.agencies || []).forEach(function (a) { parts.push(a.name || ""); });
+  return fold(parts.map(squash).join(" "));
+}
+
+function daysInMonth(y, m) {
+  if (m === 2) return (y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0)) ? 29 : 28;
+  return [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1];
+}
+function isIso(s) {
+  if (typeof s !== "string" || !ISO_RE.test(s)) return false;
+  var y = +s.slice(0, 4), m = +s.slice(5, 7), d = +s.slice(8, 10);
+  return y >= 1 && m >= 1 && m <= 12 && d >= 1 && d <= daysInMonth(y, m);
+}
+// Proleptic Gregorian day numbers (H. Hinnant's days_from_civil / civil_from_days), integer only.
+function dayNum(s) {
+  var y = +s.slice(0, 4), m = +s.slice(5, 7), d = +s.slice(8, 10);
+  y -= m <= 2 ? 1 : 0;
+  var era = Math.floor(y / 400), yoe = y - era * 400;
+  var doy = Math.floor((153 * (m + (m > 2 ? -3 : 9)) + 2) / 5) + d - 1;
+  var doe = yoe * 365 + Math.floor(yoe / 4) - Math.floor(yoe / 100) + doy;
+  return era * 146097 + doe - 719468;
+}
+function pad(n, w) { var s = String(n); while (s.length < w) s = "0" + s; return s; }
+function fromDayNum(z) {
+  z += 719468;
+  var era = Math.floor(z / 146097), doe = z - era * 146097;
+  var yoe = Math.floor((doe - Math.floor(doe / 1460) + Math.floor(doe / 36524) - Math.floor(doe / 146096)) / 365);
+  var doy = doe - (365 * yoe + Math.floor(yoe / 4) - Math.floor(yoe / 100));
+  var mp = Math.floor((5 * doy + 2) / 153);
+  var d = doy - Math.floor((153 * mp + 2) / 5) + 1;
+  var m = mp + (mp < 10 ? 3 : -9);
+  var y = yoe + era * 400 + (m <= 2 ? 1 : 0);
+  return pad(y, 4) + "-" + pad(m, 2) + "-" + pad(d, 2);
+}
+function addDays(a, n) {
+  var z = dayNum(a) + n;
+  if (z > dayNum("9999-12-31")) return "9999-12-31";
+  if (z < dayNum("0001-01-01")) return "0001-01-01";
+  return fromDayNum(z);
+}
+function daysBetween(a, b) { return dayNum(b) - dayNum(a); }
+
+function windowDays(v) {
+  if (typeof v !== "number" || !isFinite(v)) return 14;
+  return Math.max(0, Math.min(365, Math.trunc(v)));
+}
+function closingSoon(doc, ref, win) {
+  var c = doc.comments_close_on;
+  return isIso(c) && ref <= c && c <= addDays(ref, win);
+}
+function cmp(a, b) { return a < b ? -1 : a > b ? 1 : 0; }
+
+function filterDocuments(docs, query) {
+  var watch = query.watch || "";
+  var typ = query.type || "";
+  var terms = parseQuery(query.q || "");
+  var dFrom = isIso(query.from) ? query.from : "";
+  var dTo = isIso(query.to) ? query.to : "";
+  var closing = query.closing === true;
+  var ref = isIso(query.ref) ? query.ref : "";
+  var win = windowDays(query.window);
+  var sort = query.sort === "closing" ? "closing" : "newest";
+  var hits = [];
+  for (var i = 0; i < docs.length; i++) {
+    var d = docs[i];
+    if (watch && (d.watch || []).indexOf(watch) < 0) continue;
+    if (typ && d.type !== typ) continue;
+    var pub = d.publication_date || "";
+    if (dFrom && pub < dFrom) continue;
+    if (dTo && pub > dTo) continue;
+    if (closing && !(ref && closingSoon(d, ref, win))) continue;
+    if (terms.include.length || terms.exclude.length) {
+      var h = haystack(d), ok = true, j;
+      for (j = 0; ok && j < terms.include.length; j++) if (h.indexOf(terms.include[j]) < 0) ok = false;
+      for (j = 0; ok && j < terms.exclude.length; j++) if (h.indexOf(terms.exclude[j]) >= 0) ok = false;
+      if (!ok) continue;
+    }
+    hits.push(d);
+  }
+  hits.sort(function (x, y) {
+    return cmp(y.publication_date || "", x.publication_date || "") || cmp(y.document_number || "", x.document_number || "");
+  });
+  if (sort === "closing") {
+    hits.sort(function (x, y) {
+      var a = isIso(x.comments_close_on), b = isIso(y.comments_close_on);
+      if (a && b) return cmp(x.comments_close_on, y.comments_close_on);
+      return a ? -1 : b ? 1 : 0;
+    });
+  }
+  var byType = {}, byWatch = {}, closingCount = 0;
+  hits.forEach(function (d) {
+    byType[d.type] = (byType[d.type] || 0) + 1;
+    (d.watch || []).forEach(function (w) { byWatch[w] = (byWatch[w] || 0) + 1; });
+    if (ref && closingSoon(d, ref, win)) closingCount++;
+  });
+  return {
+    numbers: hits.map(function (d) { return d.document_number; }),
+    count: hits.length, by_type: byType, by_watch: byWatch, closing_count: closingCount
+  };
+}
+
+function csvCell(v) {
+  var s;
+  if (v === null || v === undefined) s = "";
+  else if (Array.isArray(v)) s = v.map(String).join("; ");
+  else s = String(v);
+  if (s && "=+-@\t\r".indexOf(s.charAt(0)) >= 0) s = "'" + s;
+  if (/[,"\n\r]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
+  return s;
+}
+function toCsv(docs) {
+  var lines = [CSV_COLUMNS.join(",")];
+  docs.forEach(function (d) { lines.push(CSV_COLUMNS.map(function (c) { return csvCell(d[c]); }).join(",")); });
+  return lines.join("\n") + "\n";
+}
+
+function safeUrl(v) {
+  if (typeof v !== "string" || v.length > 2000) return null;
+  for (var i = 0; i < v.length; i++) {
+    var c = v.charAt(i);
+    if (c < "!" || c > "~" || "<>\"'`\\".indexOf(c) >= 0) return null;
+  }
+  for (var k = 0; k < URL_PREFIXES.length; k++) if (v.indexOf(URL_PREFIXES[k]) === 0) return v;
+  return null;
+}
+function strList(v) { return Array.isArray(v) ? v.filter(function (x) { return typeof x === "string"; }) : []; }
+function isObj(v) { return v !== null && typeof v === "object" && !Array.isArray(v); }
+
+function coerceDoc(d) {
+  if (!isObj(d)) return null;
+  var num = d.document_number, title = d.title, pub = d.publication_date;
+  if (typeof num !== "string" || !DOCNUM_RE.test(num) || typeof title !== "string" || !title || !isIso(pub)) return null;
+  var agencies = [];
+  if (Array.isArray(d.agencies)) d.agencies.forEach(function (a) {
+    if (isObj(a)) agencies.push({ name: typeof a.name === "string" ? a.name : "", slug: typeof a.slug === "string" ? a.slug : null });
+  });
+  return {
+    document_number: num,
+    title: title,
+    type: typeof d.type === "string" && TYPES_ALL.indexOf(d.type) >= 0 ? d.type : "Other",
+    agencies: agencies,
+    watch: strList(d.watch),
+    publication_date: pub,
+    comments_close_on: isIso(d.comments_close_on) ? d.comments_close_on : null,
+    effective_on: isIso(d.effective_on) ? d.effective_on : null,
+    abstract: typeof d.abstract === "string" ? d.abstract : null,
+    html_url: safeUrl(d.html_url),
+    pdf_url: safeUrl(d.pdf_url),
+    docket_ids: strList(d.docket_ids),
+    regulation_id_numbers: strList(d.regulation_id_numbers),
+    significant: typeof d.significant === "boolean" ? d.significant : null
+  };
+}
+
+function coerceDataset(obj) {
+  if (!isObj(obj) || !Array.isArray(obj.documents)) throw new Error("Data file is not a Reg Watch documents.json (no 'documents' list).");
+  var raw = obj.documents;
+  if (raw.length > MAX_DOCS) throw new Error("Data file has " + raw.length + " documents; the page reads at most " + MAX_DOCS + ".");
+  var docs = [], seen = Object.create(null), dropped = 0;
+  raw.forEach(function (d) {
+    var c = coerceDoc(d);
+    if (c === null || seen[c.document_number]) { dropped++; return; }
+    seen[c.document_number] = true;
+    docs.push(c);
+  });
+  var agencies = [];
+  if (Array.isArray(obj.agencies)) obj.agencies.forEach(function (a) {
+    if (isObj(a) && typeof a.key === "string" && a.key) agencies.push({ key: a.key, label: typeof a.label === "string" ? a.label : a.key });
+  });
+  return { docs: docs, dropped: dropped, updated: isIso(obj.updated) ? obj.updated : null, agencies: agencies };
+}
+</script>
+
+<script id="ui">
+"use strict";
+(function () {
+  var PAGE = 100;
+  var $ = function (id) { return document.getElementById(id); };
+  var state = { docs: [], byNum: Object.create(null), agencies: [], updated: null, shown: PAGE, live: false, feedBase: null, feeds: [] };
+
+  function todayLocal() {
+    var t = new Date();
+    return pad(t.getFullYear(), 4) + "-" + pad(t.getMonth() + 1, 2) + "-" + pad(t.getDate(), 2);
+  }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = text;
+    return e;
+  }
+  function link(href, text) {
+    var a = el("a", null, text);
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    return a;
+  }
+  function slugClass(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-"); }
+
+  function readQuery() {
+    var win = parseInt($("f-window").value, 10);
+    var view = document.querySelector('input[name="view"]:checked');
+    return {
+      watch: $("f-agency").value,
+      type: $("f-type").value,
+      q: $("f-q").value,
+      from: $("f-from").value,
+      to: $("f-to").value,
+      closing: !!view && view.value === "closing",
+      ref: $("f-ref").value,
+      window: isFinite(win) ? win : 14,
+      sort: $("f-sort").value
+    };
+  }
+
+  function fillAgencies() {
+    var sel = $("f-agency");
+    var counts = {};
+    state.docs.forEach(function (d) { d.watch.forEach(function (w) { counts[w] = (counts[w] || 0) + 1; }); });
+    var keys = state.agencies.length ? state.agencies : Object.keys(counts).sort().map(function (k) { return { key: k, label: k }; });
+    sel.textContent = "";
+    var all = el("option", null, "All agencies (" + state.docs.length + ")");
+    all.value = "";
+    sel.appendChild(all);
+    keys.forEach(function (a) {
+      var o = el("option", null, a.key + (a.label && a.label !== a.key ? ": " + a.label : "") + " (" + (counts[a.key] || 0) + ")");
+      o.value = a.key;
+      sel.appendChild(o);
+    });
+  }
+
+  function dueChip(d, ref) {
+    if (!d.comments_close_on || !isIso(ref)) return null;
+    var n = daysBetween(ref, d.comments_close_on);
+    if (n < 0) return el("span", "chip", "Comments closed");
+    var text = n === 0 ? "Comments close today" : "Comments close in " + n + (n === 1 ? " day" : " days");
+    return el("span", "chip " + (n <= 7 ? "due-hot" : n <= 14 ? "due-warm" : "watch"), text);
+  }
+
+  function renderDoc(d, ref) {
+    var li = el("li", "doc");
+    var meta = el("div", "doc-meta");
+    meta.appendChild(el("span", "chip type-" + slugClass(d.type), d.type));
+    d.watch.forEach(function (w) { meta.appendChild(el("span", "chip watch", w)); });
+    if (d.significant === true) meta.appendChild(el("span", "chip sig", "Significant"));
+    var due = dueChip(d, ref);
+    if (due) meta.appendChild(due);
+    meta.appendChild(el("span", "date", d.publication_date));
+    meta.appendChild(el("span", "date", d.document_number));
+    li.appendChild(meta);
+
+    var h = el("h3", "doc-title");
+    if (d.html_url) h.appendChild(link(d.html_url, d.title)); else h.textContent = d.title;
+    li.appendChild(h);
+
+    var lines = el("div", "doc-lines");
+    function line(k, v, mono) {
+      if (!v) return;
+      var s = el("span");
+      s.appendChild(el("span", "k", k + " "));
+      s.appendChild(el("span", mono ? "date" : null, v));
+      lines.appendChild(s);
+    }
+    var names = d.agencies.map(function (a) { return a.name; }).filter(Boolean).join("; ");
+    line("Agency", names);
+    line("Comments close", d.comments_close_on, true);
+    line("Effective", d.effective_on, true);
+    if (d.docket_ids.length) line("Docket", d.docket_ids.slice(0, 4).join(", ") + (d.docket_ids.length > 4 ? " +" + (d.docket_ids.length - 4) : ""));
+    if (d.regulation_id_numbers.length) line("RIN", d.regulation_id_numbers.slice(0, 4).join(", ") + (d.regulation_id_numbers.length > 4 ? " +" + (d.regulation_id_numbers.length - 4) : ""));
+    if (lines.childNodes.length) li.appendChild(lines);
+
+    if (d.abstract) {
+      var det = el("details");
+      det.appendChild(el("summary", null, "Abstract"));
+      det.appendChild(el("p", null, d.abstract));
+      li.appendChild(det);
+    }
+    var links = el("div", "doc-links");
+    if (d.html_url) links.appendChild(link(d.html_url, "federalregister.gov"));
+    if (d.pdf_url) links.appendChild(link(d.pdf_url, "Official PDF"));
+    if (links.childNodes.length) li.appendChild(links);
+    return li;
+  }
+
+  var lastResult = null;
+  function render(resetPaging) {
+    if (resetPaging) state.shown = PAGE;
+    var q = readQuery();
+    var win = windowDays(q.window);
+    var label = "Comments closing in " + win + (win === 1 ? " day" : " days");
+    $("v-closing-text").textContent = label;
+    $("t-closing-k").textContent = label;
+    var res = filterDocuments(state.docs, q);
+    lastResult = res;
+    $("t-count").textContent = String(res.count);
+    $("t-closing").textContent = String(res.closing_count);
+    $("t-rules").textContent = String((res.by_type["Rule"] || 0) + (res.by_type["Proposed Rule"] || 0));
+    var list = $("results");
+    list.textContent = "";
+    var frag = document.createDocumentFragment();
+    var n = Math.min(state.shown, res.numbers.length);
+    for (var i = 0; i < n; i++) frag.appendChild(renderDoc(state.byNum[res.numbers[i]], q.ref));
+    list.appendChild(frag);
+    $("no-results").classList.toggle("hidden", res.count > 0);
+    $("btn-more").classList.toggle("hidden", n >= res.numbers.length);
+    $("shown-status").textContent = res.count ? "Showing " + n + " of " + res.count : "";
+    $("res-tag").textContent = q.closing ? "Closing view" : (q.sort === "closing" ? "By deadline" : "Newest first");
+  }
+
+  function copyCsv() {
+    var docs = (lastResult ? lastResult.numbers : []).map(function (k) { return state.byNum[k]; });
+    var text = toCsv(docs);
+    var status = $("copy-status");
+    function fallback() {
+      var ta = $("csv-fallback");
+      ta.value = text;
+      ta.classList.remove("hidden");
+      $("csv-fallback-label").classList.remove("hidden");
+      ta.focus();
+      ta.select();
+      status.textContent = "Clipboard is not available here. Select the text below and copy it.";
+    }
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) { fallback(); return; }
+      navigator.clipboard.writeText(text).then(function () {
+        status.textContent = "Copied " + docs.length + " row" + (docs.length === 1 ? "" : "s") + " as CSV.";
+      }).catch(fallback);
+    } catch (e) { fallback(); }
+  }
+
+  function resetFilters(defaultRef) {
+    $("f-q").value = "";
+    $("f-agency").value = "";
+    $("f-type").value = "";
+    $("f-from").value = "";
+    $("f-to").value = "";
+    $("v-all").checked = true;
+    $("f-window").value = "14";
+    $("f-sort").value = "newest";
+    $("f-ref").value = defaultRef;
+    $("copy-status").textContent = "";
+    $("csv-fallback").classList.add("hidden");
+    $("csv-fallback-label").classList.add("hidden");
+  }
+
+  function renderFeeds() {
+    if (!state.live || !state.feedBase) return;
+    var box = $("feeds");
+    box.textContent = "";
+    var feedRe = /^feed(-[a-z0-9_-]{1,40})?\.xml$/;
+    box.appendChild(link(state.feedBase + "feed.xml", "All agencies"));
+    state.feeds.forEach(function (f) { if (feedRe.test(f.feed)) box.appendChild(link(state.feedBase + f.feed, f.key)); });
+    $("feeds-panel").classList.remove("hidden");
+  }
+
+  function useData(obj, live, feedBase) {
+    var ds = coerceDataset(obj);
+    state.docs = ds.docs;
+    state.byNum = Object.create(null);
+    ds.docs.forEach(function (d) { state.byNum[d.document_number] = d; });
+    state.agencies = ds.agencies;
+    state.updated = ds.updated;
+    state.live = live;
+    state.feedBase = feedBase || null;
+    state.feeds = Array.isArray(obj.agencies) ? obj.agencies.filter(function (a) { return a && typeof a.key === "string" && typeof a.feed === "string"; }) : [];
+    var note = $("data-note");
+    note.classList.remove("err");
+    var upd = ds.updated || "an unknown date";
+    var extra = ds.dropped ? " " + ds.dropped + " malformed record" + (ds.dropped === 1 ? " was" : "s were") + " skipped." : "";
+    if (live) {
+      if (typeof obj.complete_since === "string" && isIso(obj.complete_since)) {
+        // complete_since is not advanced daily (to keep quiet days diff-free); the retention window is the real floor.
+        var since = obj.complete_since;
+        var ret = obj.retention_days;
+        if (ds.updated && typeof ret === "number" && isFinite(ret) && ret > 0) {
+          var floor = addDays(ds.updated, -Math.trunc(ret));
+          if (floor > since) since = floor;
+        }
+        note.textContent = "Updated " + upd + " from the Federal Register API. " + ds.docs.length + " documents published since " + since + "." + extra;
+      } else {
+        note.textContent = "Sample data from " + upd + " (" + ds.docs.length + " documents). The daily collector has not completed a run yet; run the collect workflow to fill it." + extra;
+      }
+      $("data-tag").textContent = typeof obj.complete_since === "string" && isIso(obj.complete_since) ? "Live data" : "Sample data";
+    } else {
+      note.textContent = "Snapshot as of " + upd + ". The GitHub version updates daily. " + ds.docs.length + " real documents from the Federal Register API." + extra;
+      $("data-tag").textContent = "Example data: snapshot " + upd;
+    }
+    fillAgencies();
+    var ref = live ? todayLocal() : (ds.updated || todayLocal());
+    resetFilters(ref);
+    renderFeeds();
+    render(true);
+    return ref;
+  }
+
+  function showError(msg) {
+    var note = $("data-note");
+    note.classList.add("err");
+    note.textContent = msg;
+  }
+
+  var defaultRef = todayLocal();
+  function wire() {
+    var deb = null;
+    $("f-q").addEventListener("input", function () { clearTimeout(deb); deb = setTimeout(function () { render(true); }, 120); });
+    ["f-agency", "f-type", "f-from", "f-to", "f-ref", "f-window", "f-sort", "v-all", "v-closing"].forEach(function (id) {
+      $(id).addEventListener("change", function () { render(true); });
+    });
+    $("f-window").addEventListener("input", function () { render(true); });
+    $("btn-reset").addEventListener("click", function () { resetFilters(defaultRef); render(true); });
+    $("btn-csv").addEventListener("click", copyCsv);
+    $("btn-more").addEventListener("click", function () { state.shown += PAGE; render(false); });
+  }
+
+  function loadSnapshot() {
+    var node = $("snapshot");
+    var obj = null;
+    try { obj = JSON.parse(node ? node.textContent : "null"); } catch (e) { obj = null; }
+    return obj;
+  }
+
+  wire();
+  var snap = loadSnapshot();
+  if (typeof window.regWatchLoad === "function") {
+    $("data-note").textContent = "Loading the latest data.";
+    window.regWatchLoad().then(function (r) {
+      try { defaultRef = useData(r.data, true, r.base); }
+      catch (e) { showError("Could not read the data file: " + e.message); }
+    }).catch(function (e) {
+      var shown = "";
+      if (snap) {
+        try { defaultRef = useData(snap, false); shown = " Showing the embedded snapshot as of " + (state.updated || "an unknown date") + " instead; it is not current."; } catch (e2) { /* fall through */ }
+      }
+      showError("Could not load data/documents.json (" + (e && e.message ? e.message : "network error") + ")." + shown + " Run the collect workflow once, then reload.");
+    });
+  } else if (snap) {
+    try { defaultRef = useData(snap, false); } catch (e) { showError("Embedded snapshot is unreadable: " + e.message); }
+  } else {
+    showError("No data embedded in this page. Run python web/embed_snapshot.py.");
+  }
+})();
+</script>

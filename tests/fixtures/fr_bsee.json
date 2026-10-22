@@ -1,0 +1,206 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=safety-and-environmental-enforcement-bureau",
+   "count": 332,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=safety-and-environmental-enforcement-bureau&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3OTAwMzUyMDAwMDAsIjIwMjYtMTkyOTMiXQ",
+   "results": [
+    {
+     "document_number": "2026-21182",
+     "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Well Operations and Equipment",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection with revisions.",
+     "publication_date": "2026-10-16",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/16/2026-21182/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21182.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Safety and Environmental Enforcement",
+       "name": "Safety and Environmental Enforcement Bureau",
+       "slug": "safety-and-environmental-enforcement-bureau",
+       "id": 576,
+       "url": "https://www.federalregister.gov/agencies/safety-and-environmental-enforcement-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/576",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-11-16",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket ID BSEE-2026-0067",
+      "EEEE500000 256E1700D2 ET1SF0000.EAQ000",
+      "OMB Control Number 1014-0028"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21158",
+     "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Application for Permit To Drill (APD, Revised APD), Supplemental APD Information Sheet, and All Supporting Documentation",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.",
+     "publication_date": "2026-10-16",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/16/2026-21158/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21158.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Safety and Environmental Enforcement",
+       "name": "Safety and Environmental Enforcement Bureau",
+       "slug": "safety-and-environmental-enforcement-bureau",
+       "id": 576,
+       "url": "https://www.federalregister.gov/agencies/safety-and-environmental-enforcement-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/576",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-11-16",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket ID BSEE-2025-0299",
+      "EEEE500000-256E1700D2-ET1SF0000.EAQ000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-20342",
+     "title": "Agency Information Collection Activities; Oil and Gas Production Requirements",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.",
+     "publication_date": "2026-10-05",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/05/2026-20342/agency-information-collection-activities-oil-and-gas-production-requirements",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20342.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Safety and Environmental Enforcement",
+       "name": "Safety and Environmental Enforcement Bureau",
+       "slug": "safety-and-environmental-enforcement-bureau",
+       "id": 576,
+       "url": "https://www.federalregister.gov/agencies/safety-and-environmental-enforcement-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/576",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-12-04",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket ID BSEE-2026-0265",
+      "EEEE500000-256E1700D2-ET1SF0000.EAQ000",
+      "OMB Control Number 1014-0019"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-20337",
+     "title": "Agency Information Collection Activities; General",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.",
+     "publication_date": "2026-10-05",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/05/2026-20337/agency-information-collection-activities-general",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20337.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Safety and Environmental Enforcement",
+       "name": "Safety and Environmental Enforcement Bureau",
+       "slug": "safety-and-environmental-enforcement-bureau",
+       "id": 576,
+       "url": "https://www.federalregister.gov/agencies/safety-and-environmental-enforcement-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/576",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-12-04",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket ID BSEE-2026-0298",
+      "EEEE500000-256E1700D2-ET1SF0000.EAQ000",
+      "OMB Control Number 1014-0022"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-19293",
+     "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Decommissioning Activities",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.",
+     "publication_date": "2026-09-22",
+     "html_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19293/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19293.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Safety and Environmental Enforcement",
+       "name": "Safety and Environmental Enforcement Bureau",
+       "slug": "safety-and-environmental-enforcement-bureau",
+       "id": 576,
+       "url": "https://www.federalregister.gov/agencies/safety-and-environmental-enforcement-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/576",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-10-22",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket ID BSEE-2025-0233",
+      "EEEE500000-256E1700D2-ET1SF0000.EAQ000",
+      "OMB Control Number 1014-0010"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  }
+ ]
+}

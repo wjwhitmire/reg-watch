@@ -1,0 +1,211 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=land-management-bureau",
+   "count": 10000,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=land-management-bureau&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3ODU5NzQ0MDAwMDAsIjIwMjYtMTYwNzIiXQ",
+   "results": [
+    {
+     "document_number": "2026-17018",
+     "title": "Filing Plats of Survey; New Mexico, Oklahoma",
+     "type": "Notice",
+     "abstract": "The plats of survey and the supplemental plat of the following described lands are scheduled to be officially filed 30 calendar days after the date of this publication in the Bureau of Land Management (BLM) New Mexico State Office. The surveys and plat announced in this notice are necessary for the management of these lands.",
+     "publication_date": "2026-08-20",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/20/2026-17018/filing-plats-of-survey-new-mexico-oklahoma",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-17018.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Land Management",
+       "name": "Land Management Bureau",
+       "slug": "land-management-bureau",
+       "id": 275,
+       "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "A2407-014-004-065516, #O2509-014-004-125222",
+      "LLNM931000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-16992",
+     "title": "Agency Information Collection Activities; Coal Management",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act of 1995 (PRA), the Bureau of Land Management (BLM) proposes extending an expiring information collection.",
+     "publication_date": "2026-08-20",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/20/2026-16992/agency-information-collection-activities-coal-management",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16992.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Land Management",
+       "name": "Land Management Bureau",
+       "slug": "land-management-bureau",
+       "id": 275,
+       "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-10-19",
+     "effective_on": null,
+     "docket_ids": [
+      "A2407-014-004-065516, #O2509-014-004-125222",
+      "LLHQ320000L13200000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-16527",
+     "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Information Required To Cross Private Land for Access to BLM Lands",
+     "type": "Notice",
+     "abstract": "In accordance with the Paperwork Reduction Act of 1995 (PRA), the Bureau of Land Management (BLM) is requesting approval for a new information collection.",
+     "publication_date": "2026-08-13",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/13/2026-16527/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-13/pdf/2026-16527.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Land Management",
+       "name": "Land Management Bureau",
+       "slug": "land-management-bureau",
+       "id": 275,
+       "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2026-09-14",
+     "effective_on": null,
+     "docket_ids": [
+      "A2407-014-004-065516, #O2509-014-004-125222",
+      "LLHQ/LLNMP01000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-16295",
+     "title": "Public Land Order No. 7969; Withdrawal Revocation Calcasieu Radio Beacon Station, Calcasieu, Cameron Parish, Louisiana",
+     "type": "Notice",
+     "abstract": "This order revokes a withdrawal created by an Executive Order dated November 22, 1875, which reserved land at the mouth of the Calcasieu River in Louisiana for lighthouse purposes. The approximately 2.97-acres identified for return to the public domain has been managed for lighthouse purposes since 1875. The public land was closed to the general land laws and location and entry under the United States mining laws. The Bureau of Land Management (BLM) has evaluated the land and determined it is suitable for return to the public domain.",
+     "publication_date": "2026-08-11",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/11/2026-16295/public-land-order-no-7969-withdrawal-revocation-calcasieu-radio-beacon-station-calcasieu-cameron",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16295.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Land Management",
+       "name": "Land Management Bureau",
+       "slug": "land-management-bureau",
+       "id": 275,
+       "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-08-11",
+     "docket_ids": [
+      "A2407-014-004-065515",
+      "O2509-014-004-125222",
+      "LLESJ0000",
+      "LAES-106743780"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-16072",
+     "title": "Proposed Reinstatement of Terminated Oil and Gas Lease WYW179793, Wyoming",
+     "type": "Notice",
+     "abstract": "In accordance with the Mineral Leasing Act of 1920, as amended, the Bureau of Land Management (BLM) received a petition for reinstatement of terminated competitive oil and gas lease WYW179793 in Converse County, Wyoming. The lessee filed the petition for reinstatement on time and has met all filing requirements. No leases were issued that affect these lands. The Bureau of Land Management proposes to reinstate the lease.",
+     "publication_date": "2026-08-06",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/06/2026-16072/proposed-reinstatement-of-terminated-oil-and-gas-lease-wyw179793-wyoming",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16072.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Land Management",
+       "name": "Land Management Bureau",
+       "slug": "land-management-bureau",
+       "id": 275,
+       "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "A2407-014-004-065516, #O2509-014-004-125222",
+      "LLWY920000. L57000000.FI0000. 17XL5017AR"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  },
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&conditions[agencies][]=land-management-bureau&conditions[publication_date][gte]=2026-10-10",
+   "count": 0,
+   "total_pages": null,
+   "next_page_url": null,
+   "results": []
+  }
+ ]
+}

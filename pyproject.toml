@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reg_watch"
+version = "0.1.0"
+description = "Self-hosting tracker of US federal rulemaking for chosen agencies, built on the Federal Register API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Will Whitmire" }]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Office/Business",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+reg-watch = "reg_watch.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,199 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=interior-department",
+   "count": 10000,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=interior-department&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3OTI0NTQ0MDAwMDAsIjIwMjYtMjE0NjIiXQ",
+   "results": [
+    {
+     "document_number": "2026-21476",
+     "title": "Notice of Supplemented Documented Petition for Federal Acknowledgment as an American Indian Tribe",
+     "type": "Notice",
+     "abstract": "The Department of the Interior (Department) gives notice that the group known as the Juane[ntilde]o Band of Mission Indians, Acjachemen Nation, a petitioner for Federal acknowledgment as an American Indian Tribe, has chosen to complete the petitioning process under the current version of the acknowledgment regulations and has supplemented its petition. The Juane[ntilde]o Band of Mission Indians, Acjachemen Nation had been proceeding under a previous version of the regulations (as they existed prior to July 31, 2015). The Department seeks comments and evidence from the public on the supplemented petition.",
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21476/notice-of-supplemented-documented-petition-for-federal-acknowledgment-as-an-american-indian-tribe",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21476.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Indian Affairs",
+       "name": "Indian Affairs Bureau",
+       "slug": "indian-affairs-bureau",
+       "id": 234,
+       "url": "https://www.federalregister.gov/agencies/indian-affairs-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/234",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": "2027-02-18",
+     "effective_on": null,
+     "docket_ids": [
+      "278A2100DD/AAKC001030/A0A501010.999900"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21475",
+     "title": "Indian Gaming; Extension of Tribal-State Class III Gaming Compact Between the Flandreau Santee Sioux Tribe and the State of South Dakota",
+     "type": "Notice",
+     "abstract": "This notice announces the extension of the Class III gaming compact between the Flandreau Santee Sioux Tribe and the State of South Dakota.",
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21475/indian-gaming-extension-of-tribal-state-class-iii-gaming-compact-between-the-flandreau-santee-sioux",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21475.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Indian Affairs",
+       "name": "Indian Affairs Bureau",
+       "slug": "indian-affairs-bureau",
+       "id": 234,
+       "url": "https://www.federalregister.gov/agencies/indian-affairs-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/234",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-10-21",
+     "docket_ids": [
+      "278A2100DDAAKE200000/A0A501010.000000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21473",
+     "title": "Ohkay Owingeh, New Mexico-Liquor Control Ordinance Amendment",
+     "type": "Notice",
+     "abstract": "This notice publishes amendments to the Ohkay Owingeh, New Mexico Liquor Control Ordinance, which amends and replaces the previous liquor control ordinance published on December 26, 1989.",
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21473/ohkay-owingeh-new-mexico-liquor-control-ordinance-amendment",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21473.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Indian Affairs",
+       "name": "Indian Affairs Bureau",
+       "slug": "indian-affairs-bureau",
+       "id": 234,
+       "url": "https://www.federalregister.gov/agencies/indian-affairs-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/234",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-10-21",
+     "docket_ids": [
+      "278A2100DD/AAMM001010/A0A600000.000000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21474",
+     "title": "Civil Penalties Inflation Adjustments; Annual Adjustments",
+     "type": "Rule",
+     "abstract": "This rule provides for annual adjustments to the level of civil monetary penalties contained in Bureau of Indian Affairs (Bureau) regulations to account for inflation under the Federal Civil Penalties Inflation Adjustment Act Improvements Act of 2015 and Office of Management and Budget (OMB) guidance.",
+     "publication_date": "2026-10-20",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/20/2026-21474/civil-penalties-inflation-adjustments-annual-adjustments",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21474.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Indian Affairs",
+       "name": "Indian Affairs Bureau",
+       "slug": "indian-affairs-bureau",
+       "id": 234,
+       "url": "https://www.federalregister.gov/agencies/indian-affairs-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/234",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-10-20",
+     "docket_ids": [
+      "267A2100DD/AAKP3000000/A0A501010.000000"
+     ],
+     "regulation_id_numbers": [
+      "1076-AF81"
+     ],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21462",
+     "title": "American Samoa Outer Continental Shelf Pacific Mineral Lease Sale 1",
+     "type": "Notice",
+     "abstract": "The Marine Minerals Administration (MMA) will conduct an auction for lease areas offered in the American Samoa Outer Continental Shelf (OCS) Pacific Mineral Lease Sale 1 (Lease Sale PACM-1), in accordance with the Outer Continental Shelf Lands Act (OCSLA), as amended, and its implementing regulations. The Final Leasing Notice (FLN) package for this lease sale contains information essential to potential bidders, including Information to Lessees and Lease Stipulations.",
+     "publication_date": "2026-10-20",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/20/2026-21462/american-samoa-outer-continental-shelf-pacific-mineral-lease-sale-1",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21462.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF THE INTERIOR",
+       "name": "Interior Department",
+       "slug": "interior-department",
+       "id": 253,
+       "url": "https://www.federalregister.gov/agencies/interior-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Bureau of Ocean Energy Management",
+       "name": "Ocean Energy Management Bureau",
+       "slug": "ocean-energy-management-bureau",
+       "id": 575,
+       "url": "https://www.federalregister.gov/agencies/ocean-energy-management-bureau",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/575",
+       "parent_id": 253
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "Docket No. BOEM-2026-0331"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  }
+ ]
+}

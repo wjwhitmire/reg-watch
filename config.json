@@ -1,0 +1,26 @@
+{
+  "repo_url": "{{REPO_URL}}",
+  "site_url": "{{LIVE_URL}}",
+  "agencies": [
+    {"key": "CFTC", "slug": "commodity-futures-trading-commission", "label": "Commodity Futures Trading Commission"},
+    {"key": "SEC", "slug": "securities-and-exchange-commission", "label": "Securities and Exchange Commission"},
+    {"key": "FERC", "slug": "federal-energy-regulatory-commission", "label": "Federal Energy Regulatory Commission"},
+    {"key": "EPA", "slug": "environmental-protection-agency", "label": "Environmental Protection Agency"},
+    {"key": "PHMSA", "slug": "pipeline-and-hazardous-materials-safety-administration", "label": "Pipeline and Hazardous Materials Safety Administration"},
+    {"key": "BSEE", "slug": "safety-and-environmental-enforcement-bureau", "label": "Bureau of Safety and Environmental Enforcement"},
+    {"key": "BLM", "slug": "land-management-bureau", "label": "Bureau of Land Management"},
+    {"key": "Interior", "slug": "interior-department", "label": "Department of the Interior"}
+  ],
+  "per_page": 100,
+  "retention_days": 365,
+  "first_run_lookback_days": 30,
+  "overlap_days": 3,
+  "chunk_days": 31,
+  "max_pages_per_query": 40,
+  "max_retries": 5,
+  "backoff_base_s": 2,
+  "backoff_cap_s": 120,
+  "request_delay_s": 1,
+  "timeout_s": 30,
+  "feed_entries": 200
+}

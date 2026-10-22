@@ -1,0 +1,68 @@
+name: collect
+
+# Daily Federal Register pull. 11:17 UTC is after the 6:00 ET publication and off the hour.
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+    inputs:
+      backfill_days:
+        description: "Fetch this many days back (blank for a normal incremental run, 365 for a full first fill)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install .
+      - name: Collect
+        env:
+          BACKFILL: ${{ github.event.inputs.backfill_days }}
+        run: |
+          if [ -n "$BACKFILL" ]; then
+            case "$BACKFILL" in *[!0-9]*|0*|??????*) echo "backfill_days must be a whole number from 1 to 99999 (365 for a full year)"; exit 1;; esac
+            reg-watch collect --config config.json --data data --backfill-days "$BACKFILL"
+          else
+            reg-watch collect --config config.json --data data
+          fi
+      - name: Commit changed data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No new documents."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "data: Federal Register update $(date -u +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  # A push made with GITHUB_TOKEN does not start other workflows, so deploy Pages from here.
+  pages:
+    needs: collect
+    if: needs.collect.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

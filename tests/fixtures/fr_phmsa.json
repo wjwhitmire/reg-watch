@@ -1,0 +1,303 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&conditions[agencies][]=pipeline-and-hazardous-materials-safety-administration&conditions[publication_date][gte]=2026-10-01",
+   "count": 3,
+   "total_pages": 1,
+   "next_page_url": null,
+   "results": [
+    {
+     "document_number": "2026-21308",
+     "title": "Hazardous Materials: Notice of Actions on Special Permits",
+     "type": "Notice",
+     "abstract": "In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has granted or denied the application described herein.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21308/hazardous-materials-notice-of-actions-on-special-permits",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21308.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21307",
+     "title": "Hazardous Materials: Notice of Applications for Modification to Special Permits",
+     "type": "Notice",
+     "abstract": "In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21307/hazardous-materials-notice-of-applications-for-modification-to-special-permits",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21307.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-11-03",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21306",
+     "title": "Hazardous Materials: Notice of Applications for New Special Permits",
+     "type": "Notice",
+     "abstract": "In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21306/hazardous-materials-notice-of-applications-for-new-special-permits",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21306.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  },
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=pipeline-and-hazardous-materials-safety-administration",
+   "count": 2294,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=pipeline-and-hazardous-materials-safety-administration&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3ODU5NzQ0MDAwMDAsIjIwMjYtMTU5NzEiXQ",
+   "results": [
+    {
+     "document_number": "2026-17890",
+     "title": "Pipeline Safety: Joint Meeting of the Gas and Liquid Pipeline Advisory Committees",
+     "type": "Notice",
+     "abstract": "On July 17, 2026, PHMSA published a Federal Register notice titled: \"Pipeline Safety: Joint Meeting of the Gas and Liquid Pipeline Advisory Committees,\" which provided an opportunity for public comment by August 31, 2026, on the proceedings of the Gas and Liquid Pipeline Advisory Committees meeting related to 13 notices of proposed rulemakings (NPRM). These proposed rules covered topics such as special permit conditions, in-plant piping, incidental gathering lines, coating damage assessments, atmospheric corrosion, class change pressure tests, maximum allowable operating pressure reconfirmation, operator identification notifications, limitations on welding, remote valves, the property damage definition, right-of-way patrols, and reporting deadlines. PHMSA received requests from stakeholders to extend the comment period. Based on those requests, PHMSA is reopening the comment period for the joint Pipeline Advisory Committee (PAC) proceedings related to the 13 regulatory modernizing NPRMs to September 4, 2026.",
+     "publication_date": "2026-09-01",
+     "html_url": "https://www.federalregister.gov/documents/2026/09/01/2026-17890/pipeline-safety-joint-meeting-of-the-gas-and-liquid-pipeline-advisory-committees",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-09-01/pdf/2026-17890.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-09-04",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket No. PHMSA-2026-1156"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-16111",
+     "title": "Hazardous Materials: Allowing Fireworks Certification Agencies (FCAs) To Approve Professional Fireworks",
+     "type": "Rule",
+     "abstract": "This final rule expands the authority of a Fireworks Certification Agency (FCA) to obtain the ability to approve fireworks constructed to certain requirements. These amendments will streamline PHMSA's fireworks approval process and provide the industry with improved regulatory flexibility.",
+     "publication_date": "2026-08-07",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/07/2026-16111/hazardous-materials-allowing-fireworks-certification-agencies-fcas-to-approve-professional-fireworks",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16111.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-09-08",
+     "docket_ids": [
+      "Docket No. PHMSA-2025-0105 (HM-268Q)"
+     ],
+     "regulation_id_numbers": [
+      "2137-AG19"
+     ],
+     "significant": false
+    },
+    {
+     "document_number": "2026-15973",
+     "title": "Hazardous Materials: Notice of Actions on Special Permits",
+     "type": "Notice",
+     "abstract": "In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has granted or denied the application described herein.",
+     "publication_date": "2026-08-06",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/06/2026-15973/hazardous-materials-notice-of-actions-on-special-permits",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15973.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-09-08",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-15972",
+     "title": "Hazardous Materials: Notice of Applications for Modification to Special Permits",
+     "type": "Notice",
+     "abstract": "In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.",
+     "publication_date": "2026-08-06",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/06/2026-15972/hazardous-materials-notice-of-applications-for-modification-to-special-permits",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15972.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-08-21",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-15971",
+     "title": "Hazardous Materials: Notice of Applications for New Special Permits",
+     "type": "Notice",
+     "abstract": "In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.",
+     "publication_date": "2026-08-06",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/06/2026-15971/hazardous-materials-notice-of-applications-for-new-special-permits",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15971.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF TRANSPORTATION",
+       "name": "Transportation Department",
+       "slug": "transportation-department",
+       "id": 492,
+       "url": "https://www.federalregister.gov/agencies/transportation-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Pipeline and Hazardous Materials Safety Administration",
+       "name": "Pipeline and Hazardous Materials Safety Administration",
+       "slug": "pipeline-and-hazardous-materials-safety-administration",
+       "id": 408,
+       "url": "https://www.federalregister.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/408",
+       "parent_id": 492
+      }
+     ],
+     "comments_close_on": "2026-09-08",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  }
+ ]
+}

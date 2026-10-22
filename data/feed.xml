@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Reg Watch: all watched agencies</title>
+ <id>urn:reg-watch:feed:all</id>
+ <updated>2026-10-21T00:00:00Z</updated>
+ <author>
+  <name>Federal Register (via Reg Watch)</name>
+ </author>
+ <generator>Reg Watch</generator>
+ <rights>Federal Register content is a work of the US government and is in the public domain.</rights>
+ <entry>
+  <title>Potential Designation of Chartered Financial Analyst Designation as Qualifying Natural Persons for Accredited Investor Status</title>
+  <id>https://www.federalregister.gov/d/C1-2026-20311</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/C1-2026-20311/potential-designation-of-chartered-financial-analyst-designation-as-qualifying-natural-persons-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/C1-2026-20311.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-21. Docket Release No. 33-11447, File No. 4-933.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission for OMB Review; Comment Request; Extension: Form N-2</title>
+  <id>https://www.federalregister.gov/d/2026-21495</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21495/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-form" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21495.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-21. Docket OMB Control No. 3235-0026.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities Under OMB Review</title>
+  <id>https://www.federalregister.gov/d/2026-21492</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21492/agency-information-collection-activities-under-omb-review" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21492.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="CFTC" />
+  <summary type="text">Notice. Commodity Futures Trading Commission. Published 2026-10-21. Comments close 2026-11-20.
+
+In compliance with the Paperwork Reduction Act of 1995 ("PRA"), this notice announces that the Information Collection Request ("ICR") abstracted below has been forwarded to the Office of Information and Regulatory Affairs ("OIRA"), of the Office of Management and Budget ("OMB"), for review and comment. The ICR describes the nature of the information collection and its expected costs and burden.</summary>
+ </entry>
+ <entry>
+  <title>Combined Notice of Filings</title>
+  <id>https://www.federalregister.gov/d/2026-21490</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21490/combined-notice-of-filings" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21490.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-10-21.</summary>
+ </entry>
+ <entry>
+  <title>Combined Notice of Filings #1</title>
+  <id>https://www.federalregister.gov/d/2026-21489</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21489/combined-notice-of-filings-1" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21489.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-10-21.</summary>
+ </entry>
+ <entry>
+  <title>Combined Notice of Filings #2</title>
+  <id>https://www.federalregister.gov/d/2026-21487</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21487/combined-notice-of-filings-2" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21487.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-10-21.</summary>
+ </entry>
+ <entry>
+  <title>Self-Regulatory Organizations; CME Securities Clearing Inc.; Notice of Filing of Proposed Rule Change To Amend the CMESC Risk Management Framework (“RMF”) Related to CMESC's Default Management Practices</title>
+  <id>https://www.federalregister.gov/d/2026-21482</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21482/self-regulatory-organizations-cme-securities-clearing-inc-notice-of-filing-of-proposed-rule-change" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21482.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-21. Docket Release No. 34-106681, File No. SR-CMESC-2026-011.</summary>
+ </entry>
+ <entry>
+  <title>Self-Regulatory Organizations; Cboe EDGX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Rule 11.1(a)(3) To Describe When Unpriced Orders Are Eligible for Execution and To Amend Rule 11.6(q)(2) To Clarify the Expiration of Day Orders Entered During the Overnight Trading Session or Order Acceptance Queueing Time</title>
+  <id>https://www.federalregister.gov/d/2026-21481</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21481/self-regulatory-organizations-cboe-edgx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21481.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-21. Docket Release No. 34-106683, File No. SR-CboeEDGX-2026-071.</summary>
+ </entry>
+ <entry>
+  <title>Self-Regulatory Organizations; Cboe Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Its Fees Schedule</title>
+  <id>https://www.federalregister.gov/d/2026-21480</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21480/self-regulatory-organizations-cboe-exchange-inc-notice-of-filing-and-immediate-effectiveness-of-a" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21480.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-21. Docket Release No. 34-106680, File No. SR-CBOE-2026-080.</summary>
+ </entry>
+ <entry>
+  <title>Notice of Supplemented Documented Petition for Federal Acknowledgment as an American Indian Tribe</title>
+  <id>https://www.federalregister.gov/d/2026-21476</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21476/notice-of-supplemented-documented-petition-for-federal-acknowledgment-as-an-american-indian-tribe" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21476.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <summary type="text">Notice. Interior Department; Indian Affairs Bureau. Published 2026-10-21. Comments close 2027-02-18. Docket 278A2100DD/AAKC001030/A0A501010.999900.
+
+The Department of the Interior (Department) gives notice that the group known as the Juaneño Band of Mission Indians, Acjachemen Nation, a petitioner for Federal acknowledgment as an American Indian Tribe, has chosen to complete the petitioning process under the current version of the acknowledgment regulations and has supplemented its petition. The Juaneño Band of Mission Indians, Acjachemen Nation had been proceeding under a previous version of the regulations (as they existed prior to July 31, 2015). The Department seeks comments and evidence from the public on the supplemented petition.</summary>
+ </entry>
+ <entry>
+  <title>Indian Gaming; Extension of Tribal-State Class III Gaming Compact Between the Flandreau Santee Sioux Tribe and the State of South Dakota</title>
+  <id>https://www.federalregister.gov/d/2026-21475</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21475/indian-gaming-extension-of-tribal-state-class-iii-gaming-compact-between-the-flandreau-santee-sioux" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21475.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <summary type="text">Notice. Interior Department; Indian Affairs Bureau. Published 2026-10-21. Effective 2026-10-21. Docket 278A2100DDAAKE200000/A0A501010.000000.
+
+This notice announces the extension of the Class III gaming compact between the Flandreau Santee Sioux Tribe and the State of South Dakota.</summary>
+ </entry>
+ <entry>
+  <title>Ohkay Owingeh, New Mexico-Liquor Control Ordinance Amendment</title>
+  <id>https://www.federalregister.gov/d/2026-21473</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <published>2026-10-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/21/2026-21473/ohkay-owingeh-new-mexico-liquor-control-ordinance-amendment" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21473.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <summary type="text">Notice. Interior Department; Indian Affairs Bureau. Published 2026-10-21. Effective 2026-10-21. Docket 278A2100DD/AAMM001010/A0A600000.000000.
+
+This notice publishes amendments to the Ohkay Owingeh, New Mexico Liquor Control Ordinance, which amends and replaces the previous liquor control ordinance published on December 26, 1989.</summary>
+ </entry>
+ <entry>
+  <title>Civil Penalties Inflation Adjustments; Annual Adjustments</title>
+  <id>https://www.federalregister.gov/d/2026-21474</id>
+  <updated>2026-10-20T00:00:00Z</updated>
+  <published>2026-10-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/20/2026-21474/civil-penalties-inflation-adjustments-annual-adjustments" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21474.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="Interior" />
+  <summary type="text">Rule. Interior Department; Indian Affairs Bureau. Published 2026-10-20. Effective 2026-10-20. Docket 267A2100DD/AAKP3000000/A0A501010.000000.
+
+This rule provides for annual adjustments to the level of civil monetary penalties contained in Bureau of Indian Affairs (Bureau) regulations to account for inflation under the Federal Civil Penalties Inflation Adjustment Act Improvements Act of 2015 and Office of Management and Budget (OMB) guidance.</summary>
+ </entry>
+ <entry>
+  <title>American Samoa Outer Continental Shelf Pacific Mineral Lease Sale 1</title>
+  <id>https://www.federalregister.gov/d/2026-21462</id>
+  <updated>2026-10-20T00:00:00Z</updated>
+  <published>2026-10-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/20/2026-21462/american-samoa-outer-continental-shelf-pacific-mineral-lease-sale-1" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21462.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <summary type="text">Notice. Interior Department; Ocean Energy Management Bureau. Published 2026-10-20. Docket Docket No. BOEM-2026-0331.
+
+The Marine Minerals Administration (MMA) will conduct an auction for lease areas offered in the American Samoa Outer Continental Shelf (OCS) Pacific Mineral Lease Sale 1 (Lease Sale PACM-1), in accordance with the Outer Continental Shelf Lands Act (OCSLA), as amended, and its implementing regulations. The Final Leasing Notice (FLN) package for this lease sale contains information essential to potential bidders, including Information to Lessees and Lease Stipulations.</summary>
+ </entry>
+ <entry>
+  <title>Authorizations for Certain Activities at Liquefied Natural Gas Plants</title>
+  <id>https://www.federalregister.gov/d/2026-21443</id>
+  <updated>2026-10-20T00:00:00Z</updated>
+  <published>2026-10-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/20/2026-21443/authorizations-for-certain-activities-at-liquefied-natural-gas-plants" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="FERC" />
+  <summary type="text">Proposed Rule. Energy Department; Federal Energy Regulatory Commission. Published 2026-10-20. Comments close 2026-12-21. Docket Docket No. RM26-2-001.
+
+The Federal Energy Regulatory Commission proposes to revise its regulations to establish procedures for authorizing activities at liquefied natural gas plants without case-specific authorization orders under sections 3 or 7 of the Natural Gas Act.</summary>
+ </entry>
+ <entry>
+  <title>Environmental Review of Natural Gas Act Applications; Notice of Availability of Draft Policy Statement on Efficient Environmental Reviews of Natural Gas Project Applications</title>
+  <id>https://www.federalregister.gov/d/2026-21442</id>
+  <updated>2026-10-20T00:00:00Z</updated>
+  <published>2026-10-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/20/2026-21442/environmental-review-of-natural-gas-act-applications-notice-of-availability-of-draft-policy" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21442.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-10-20. Docket Docket No. PL26-3-000.</summary>
+ </entry>
+ <entry>
+  <title>New Source Performance Standards and National Emission Standards for Hazardous Air Pollutants; Delegation of Authority to Northwest Clean Air Agency, Washington State</title>
+  <id>https://www.federalregister.gov/d/2026-21383</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21383/new-source-performance-standards-and-national-emission-standards-for-hazardous-air-pollutants" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21383.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="EPA" />
+  <summary type="text">Proposed Rule. Environmental Protection Agency. Published 2026-10-19. Comments close 2026-11-18. Docket EPA-R10-OAR-2026-4291, FRL-13409-01-R10.
+
+The Northwest Clean Air Agency (NWCAA), located in Washington State, submitted updated regulations for receiving delegation and approval of its program for the implementation and enforcement of newly issued or revised New Source Performance Standards (NSPS) and National Emission Standards for Hazardous Air Pollutants (NESHAP), as provided for under previously approved delegation mechanisms. The updated regulations incorporate by reference certain NSPS and NESHAP promulgated by the Environmental Protection Agency (EPA) as they existed through October 18, 2023. The EPA is providing notice that it is proposing to update the delegation of certain NSPS and approve the delegation of certain NESHAP to NWCAA. The proposed delegation of authority under this action does not apply to sources located in Indian country.</summary>
+ </entry>
+ <entry>
+  <title>Further Definition of “Swap”-Inclusions</title>
+  <id>https://www.federalregister.gov/d/2026-21377</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21377/further-definition-of-swap-inclusions" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21377.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="CFTC" />
+  <summary type="text">Proposed Rule. Commodity Futures Trading Commission. Published 2026-10-19. Comments close 2026-11-18.
+
+Consistent with its jurisdiction over swaps, the Commodity Futures Trading Commission ("Commission" or "CFTC") is proposing to further define the term "swap" to explicitly include event contracts, including those based on sports-, politics-, cultural-, and weather- related events (the "Proposal").</summary>
+ </entry>
+ <entry>
+  <title>Further Definition of “Swap” To Exclude Casino-Style Gambling Products</title>
+  <id>https://www.federalregister.gov/d/2026-21376</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21376/further-definition-of-swap-to-exclude-casino-style-gambling-products" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21376.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="CFTC" />
+  <summary type="text">Rule. Commodity Futures Trading Commission. Published 2026-10-19. Comments close 2026-11-18. Effective 2026-10-19.
+
+The Commodity Futures Trading Commission ("Commission" or "CFTC") is adopting an interim final rule ("Interim Final Rule") to codify its longstanding position that casino-style gambling products, including wagers placed on sportsbooks and casino games, are excluded from the "swap" definition.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Notice of Actions on Special Permits</title>
+  <id>https://www.federalregister.gov/d/2026-21308</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21308/hazardous-materials-notice-of-actions-on-special-permits" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21308.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-10-19. Comments close 2026-11-18.
+
+In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has granted or denied the application described herein.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Notice of Applications for Modification to Special Permits</title>
+  <id>https://www.federalregister.gov/d/2026-21307</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21307/hazardous-materials-notice-of-applications-for-modification-to-special-permits" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21307.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-10-19. Comments close 2026-11-03.
+
+In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Notice of Applications for New Special Permits</title>
+  <id>https://www.federalregister.gov/d/2026-21306</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21306/hazardous-materials-notice-of-applications-for-new-special-permits" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21306.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-10-19. Comments close 2026-11-18.
+
+In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.</summary>
+ </entry>
+ <entry>
+  <title>Air Quality Plan; Arizona; Agricultural Best Management Practices Rules for the West Pinal County PM10 Nonattainment Area</title>
+  <id>https://www.federalregister.gov/d/2026-21289</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21289/air-quality-plan-arizona-agricultural-best-management-practices-rules-for-the-west-pinal-county-pm10" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21289.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="EPA" />
+  <summary type="text">Proposed Rule. Environmental Protection Agency. Published 2026-10-19. Comments close 2026-11-18. Docket EPA-R09-OAR-2024-0600, FRL-13422-01-R9.
+
+The U.S. Environmental Protection Agency (EPA) is proposing to approve a revision to the Arizona Department of Environmental Quality (ADEQ or "State") portion of the Arizona State Implementation Plan (SIP). This revision concerns emissions of particulate matter (PM) that are 10 micrometers (µm) or smaller in diameter (PM10) from agricultural crop and animal operations in the West Pinal County PM10 nonattainment area. We are proposing to approve two local rules to regulate these emission sources under the Clean Air Act (CAA or "Act").</summary>
+ </entry>
+ <entry>
+  <title>Approval and Promulgation of Implementation Plans-Pinal County (Part); West Pinal, AZ PM10 Nonattainment Area; Moderate Area, Serious Area, and Section 189(d) Plan for Attainment of the 24-Hour PM10 Standard</title>
+  <id>https://www.federalregister.gov/d/2026-21288</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21288/approval-and-promulgation-of-implementation-plans-pinal-county-part-west-pinal-az-pm10-nonattainment" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21288.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="EPA" />
+  <summary type="text">Proposed Rule. Environmental Protection Agency. Published 2026-10-19. Comments close 2026-11-18. Docket EPA-R09-OAR-2026-5119, FRL-13482-01-R9.
+
+The U.S. Environmental Protection Agency (EPA) is proposing to approve a state implementation plan (SIP) revision submitted by the State of Arizona to meet Clean Air Act (CAA or "Act") requirements applicable to the Pinal County (Part); West Pinal PM10 nonattainment area ("West Pinal County PM10 Nonattainment Area"). The EPA is proposing to find that the submitted SIP revision meets all applicable "Moderate" area, "Serious" area, and CAA section 189(d) requirements for the PM10 national ambient air quality standards (NAAQS). Additionally, the EPA is proposing to approve the PM10 motor vehicle emissions budgets included with the SIP revision for transportation conformity purposes. The EPA is also starting the adequacy process for these budgets. Our proposed approval of the SIP revision would establish an attainment date of December 31, 2026, for the area.</summary>
+ </entry>
+ <entry>
+  <title>Air Quality Plan; Arizona; Pinal County Air Quality Control District; West Pinal County PM10 Nonattainment Area; Fugitive Dust Rules</title>
+  <id>https://www.federalregister.gov/d/2026-21287</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21287/air-quality-plan-arizona-pinal-county-air-quality-control-district-west-pinal-county-pm10" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21287.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="EPA" />
+  <summary type="text">Proposed Rule. Environmental Protection Agency. Published 2026-10-19. Comments close 2026-11-18. Docket EPA-R09-OAR-2026-5581, FRL-13513-01-R9.
+
+The U.S. Environmental Protection Agency (EPA) is proposing to approve revisions to the Pinal County Air Quality Control District (PCAQCD or "District") portion of the Arizona State Implementation Plan (SIP). These revisions concern emissions of particulate matter (PM) that is 10 micrometers or smaller in diameter (PM10) from fugitive dust sources, including open areas/vacant lots, unpaved lots, unpaved roads, paved public roadways, and construction sites. We are proposing to approve local rules to regulate these emission sources under the Clean Air Act (CAA or "Act").</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities: Notice of Intent To Extend Collection 3038-0093, Part 40, Provisions Common to Registered Entities</title>
+  <id>https://www.federalregister.gov/d/2026-21275</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21275/agency-information-collection-activities-notice-of-intent-to-extend-collection-3038-0093-part-40" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21275.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="CFTC" />
+  <summary type="text">Notice. Commodity Futures Trading Commission. Published 2026-10-19. Comments close 2026-12-18.
+
+The Commodity Futures Trading Commission ("Commission" or "CFTC") is announcing an opportunity for public comment on the proposed renewal of a collection of certain information by the agency. Under the Paperwork Reduction Act ("PRA"), Federal agencies are required to publish notice in the Federal Register concerning each proposed collection of information, including each proposed extension of an existing collection of information, and to allow 60 days for public comment. This notice solicits comments on collections of information provided for by Part 40 of the Commission's regulations, Provisions Common to Registered Entities.</summary>
+ </entry>
+ <entry>
+  <title>Approval and Promulgation of Implementation Plans; Arizona; Revisions to the Cleaner Burning Gasoline, Winter Oxygenated Fuel, and Gasoline Set-Aside Programs</title>
+  <id>https://www.federalregister.gov/d/2026-21268</id>
+  <updated>2026-10-19T00:00:00Z</updated>
+  <published>2026-10-19T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/19/2026-21268/approval-and-promulgation-of-implementation-plans-arizona-revisions-to-the-cleaner-burning-gasoline" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21268.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="EPA" />
+  <summary type="text">Rule. Environmental Protection Agency. Published 2026-10-19. Effective 2026-11-18. Docket EPA-R09-OAR-2023-0054, FRL-12607-02-R9.
+
+The U.S. Environmental Protection Agency (EPA) is finalizing an approval of a revision to the Arizona State Implementation Plan (SIP) submitted by the Arizona Department of Environmental Quality (ADEQ). This revision includes statutes and regulations amending the Cleaner Burning Gasoline (CBG) program, which is a control measure in the greater Phoenix metropolitan area to reduce emissions of ozone- forming pollutants, carbon monoxide (CO), and particulate matter. Additionally, this revision addresses the Winter Oxygenated Fuel program to control CO emissions in the Tucson area. Finally, this revision repeals the Arizona Gasoline Set-aside (GSA) Program, applicable to the 1971 carbon monoxide nonattainment area covering Maricopa County and a portion of Pima County. This SIP revision is administrative in nature. This final action updates the existing SIP- approved CBG program with revisions that have been adopted and implemented by the State to clarify requirements, update references, and enhance flexibility of the program and will not impose any additional costs or regulatory burdens.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Well Operations and Equipment</title>
+  <id>https://www.federalregister.gov/d/2026-21182</id>
+  <updated>2026-10-16T00:00:00Z</updated>
+  <published>2026-10-16T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/16/2026-21182/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21182.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BSEE" />
+  <summary type="text">Notice. Interior Department; Safety and Environmental Enforcement Bureau. Published 2026-10-16. Comments close 2026-11-16. Docket Docket ID BSEE-2026-0067, EEEE500000 256E1700D2 ET1SF0000.EAQ000, OMB Control Number 1014-0028.
+
+In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection with revisions.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Application for Permit To Drill (APD, Revised APD), Supplemental APD Information Sheet, and All Supporting Documentation</title>
+  <id>https://www.federalregister.gov/d/2026-21158</id>
+  <updated>2026-10-16T00:00:00Z</updated>
+  <published>2026-10-16T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/16/2026-21158/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21158.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BSEE" />
+  <summary type="text">Notice. Interior Department; Safety and Environmental Enforcement Bureau. Published 2026-10-16. Comments close 2026-11-16. Docket Docket ID BSEE-2025-0299, EEEE500000-256E1700D2-ET1SF0000.EAQ000.
+
+In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.</summary>
+ </entry>
+ <entry>
+  <title>Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets</title>
+  <id>https://www.federalregister.gov/d/2026-20888</id>
+  <updated>2026-10-13T00:00:00Z</updated>
+  <published>2026-10-13T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/13/2026-20888/regulation-crypto-asset-transactions-and-regulation-crypto-asset-markets" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-13/pdf/2026-20888.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="CFTC" />
+  <summary type="text">Proposed Rule. Commodity Futures Trading Commission. Published 2026-10-13. Comments close 2026-12-14.
+
+The Commodity Futures Trading Commission ("Commission" or "CFTC") is issuing an advanced notice of proposed rulemaking regarding section 2(c)(2)(D) of the Commodity Exchange Act ("CEA" or "Act") to provide notice and seek public comment on its intent to develop and establish fit-for-purpose rules implementing section 2(c)(2)(D) of the Act with respect to transactions and markets in crypto assets.</summary>
+ </entry>
+ <entry>
+  <title>DPP Investors 2025 LP and DLA Piper LLP (US)</title>
+  <id>https://www.federalregister.gov/d/2026-20772</id>
+  <updated>2026-10-09T00:00:00Z</updated>
+  <published>2026-10-09T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/09/2026-20772/dpp-investors-2025-lp-and-dla-piper-llp-us" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20772.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-09. Docket Investment Company Act Release No. 36356, File No. 813-00421.</summary>
+ </entry>
+ <entry>
+  <title>Cboe Clear U.S., LLC; Notice of Filing of an Amendment to Application for Registration as a Clearing Agency Under Section 17A of the Securities Exchange Act of 1934</title>
+  <id>https://www.federalregister.gov/d/2026-20714</id>
+  <updated>2026-10-09T00:00:00Z</updated>
+  <published>2026-10-09T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/09/2026-20714/cboe-clear-us-llc-notice-of-filing-of-an-amendment-to-application-for-registration-as-a-clearing" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20714.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-09. Docket Release No. 34-106610, File No. 600-47.</summary>
+ </entry>
+ <entry>
+  <title>Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the NYSE Arca Options Proprietary Market Data Fee Schedule To Adopt Fees for One-Minute Intra-Day Volume Reports</title>
+  <id>https://www.federalregister.gov/d/2026-20713</id>
+  <updated>2026-10-09T00:00:00Z</updated>
+  <published>2026-10-09T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/09/2026-20713/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-and-immediate-effectiveness-of-a" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20713.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-09. Docket Release No. 34-106609, File No. SR-NYSEARCA-2026-102.</summary>
+ </entry>
+ <entry>
+  <title>Self-Regulatory Organizations; NYSE American LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the NYSE American Options Proprietary Market Data Fee Schedule To Adopt Fees for One-Minute Intra-Day Volume Reports</title>
+  <id>https://www.federalregister.gov/d/2026-20712</id>
+  <updated>2026-10-09T00:00:00Z</updated>
+  <published>2026-10-09T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/09/2026-20712/self-regulatory-organizations-nyse-american-llc-notice-of-filing-and-immediate-effectiveness-of-a" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20712.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-09. Docket Release No. 34-106608, File No. SR-NYSEAMER-2026-89.</summary>
+ </entry>
+ <entry>
+  <title>Self-Regulatory Organizations; The Nasdaq Stock Market LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the Exchange's Transaction Fees at Nasdaq Equity 7, Section 118, To Establish a Tier of Credit for Non-Displayed Orders (Other Than Supplemental Orders) That Provide Liquidity</title>
+  <id>https://www.federalregister.gov/d/2026-20711</id>
+  <updated>2026-10-09T00:00:00Z</updated>
+  <published>2026-10-09T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/09/2026-20711/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20711.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="SEC" />
+  <summary type="text">Notice. Securities and Exchange Commission. Published 2026-10-09. Docket Release No. 34-106607, File No. SR-NASDAQ-2026-086.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Oil and Gas Production Requirements</title>
+  <id>https://www.federalregister.gov/d/2026-20342</id>
+  <updated>2026-10-05T00:00:00Z</updated>
+  <published>2026-10-05T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/05/2026-20342/agency-information-collection-activities-oil-and-gas-production-requirements" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20342.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BSEE" />
+  <summary type="text">Notice. Interior Department; Safety and Environmental Enforcement Bureau. Published 2026-10-05. Comments close 2026-12-04. Docket Docket ID BSEE-2026-0265, EEEE500000-256E1700D2-ET1SF0000.EAQ000, OMB Control Number 1014-0019.
+
+In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; General</title>
+  <id>https://www.federalregister.gov/d/2026-20337</id>
+  <updated>2026-10-05T00:00:00Z</updated>
+  <published>2026-10-05T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/05/2026-20337/agency-information-collection-activities-general" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20337.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BSEE" />
+  <summary type="text">Notice. Interior Department; Safety and Environmental Enforcement Bureau. Published 2026-10-05. Comments close 2026-12-04. Docket Docket ID BSEE-2026-0298, EEEE500000-256E1700D2-ET1SF0000.EAQ000, OMB Control Number 1014-0022.
+
+In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Decommissioning Activities</title>
+  <id>https://www.federalregister.gov/d/2026-19293</id>
+  <updated>2026-09-22T00:00:00Z</updated>
+  <published>2026-09-22T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/09/22/2026-19293/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19293.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BSEE" />
+  <summary type="text">Notice. Interior Department; Safety and Environmental Enforcement Bureau. Published 2026-09-22. Comments close 2026-10-22. Docket Docket ID BSEE-2025-0233, EEEE500000-256E1700D2-ET1SF0000.EAQ000, OMB Control Number 1014-0010.
+
+In accordance with the Paperwork Reduction Act (PRA) of 1995, the Bureau of Safety and Environmental Enforcement (BSEE) proposes to renew an information collection.</summary>
+ </entry>
+ <entry>
+  <title>Form PF; Reporting Requirements for All Filers and Large Hedge Fund Advisers; Further Extension of Compliance Date</title>
+  <id>https://www.federalregister.gov/d/2026-18104</id>
+  <updated>2026-09-03T00:00:00Z</updated>
+  <published>2026-09-03T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/09/03/2026-18104/form-pf-reporting-requirements-for-all-filers-and-large-hedge-fund-advisers-further-extension-of" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-09-03/pdf/2026-18104.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="CFTC" />
+  <category term="SEC" />
+  <summary type="text">Rule. Commodity Futures Trading Commission; Securities and Exchange Commission. Published 2026-09-03. Effective 2026-09-03. Docket Release No. IA-6992, File No. S7-22-22.
+
+The Commodity Futures Trading Commission (the "CFTC") and the Securities and Exchange Commission (the "SEC") (collectively, "we" or the "Commissions") are further extending the compliance date for the amendments to Form PF that were adopted on February 8, 2024, from October 1, 2026, to July 1, 2027. Form PF is the confidential reporting form for certain SEC-registered investment advisers to private funds, including those that also are registered with the CFTC as a commodity pool operator (a "CPO") or a commodity trading adviser (a "CTA").</summary>
+ </entry>
+ <entry>
+  <title>Pipeline Safety: Joint Meeting of the Gas and Liquid Pipeline Advisory Committees</title>
+  <id>https://www.federalregister.gov/d/2026-17890</id>
+  <updated>2026-09-01T00:00:00Z</updated>
+  <published>2026-09-01T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/09/01/2026-17890/pipeline-safety-joint-meeting-of-the-gas-and-liquid-pipeline-advisory-committees" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-09-01/pdf/2026-17890.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-09-01. Comments close 2026-09-04. Docket Docket No. PHMSA-2026-1156.
+
+On July 17, 2026, PHMSA published a Federal Register notice titled: "Pipeline Safety: Joint Meeting of the Gas and Liquid Pipeline Advisory Committees," which provided an opportunity for public comment by August 31, 2026, on the proceedings of the Gas and Liquid Pipeline Advisory Committees meeting related to 13 notices of proposed rulemakings (NPRM). These proposed rules covered topics such as special permit conditions, in-plant piping, incidental gathering lines, coating damage assessments, atmospheric corrosion, class change pressure tests, maximum allowable operating pressure reconfirmation, operator identification notifications, limitations on welding, remote valves, the property damage definition, right-of-way patrols, and reporting deadlines. PHMSA received requests from stakeholders to extend the comment period. Based on those requests, PHMSA is reopening the comment period for the joint Pipeline Advisory Committee (PAC) proceedings related to the 13 regulatory modernizing NPRMs to September 4, 2026.</summary>
+ </entry>
+ <entry>
+  <title>Environmental Impact Statements; Notice of Availability</title>
+  <id>https://www.federalregister.gov/d/2026-17606</id>
+  <updated>2026-08-28T00:00:00Z</updated>
+  <published>2026-08-28T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/28/2026-17606/environmental-impact-statements-notice-of-availability" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-28/pdf/2026-17606.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="EPA" />
+  <summary type="text">Notice. Environmental Protection Agency. Published 2026-08-28. Docket FRL OPRM-FAD-237.</summary>
+ </entry>
+ <entry>
+  <title>Alpha-d-Glucopyranoside, Beta-d-Fructofuranosyl, Mixed Palmitates and Stearates in Pesticide Formulations; Exemption From the Requirement of a Tolerance</title>
+  <id>https://www.federalregister.gov/d/2026-17579</id>
+  <updated>2026-08-28T00:00:00Z</updated>
+  <published>2026-08-28T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/28/2026-17579/alpha-d-glucopyranoside-beta-d-fructofuranosyl-mixed-palmitates-and-stearates-in-pesticide" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-28/pdf/2026-17579.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="EPA" />
+  <summary type="text">Rule. Environmental Protection Agency. Published 2026-08-28. Effective 2026-08-28. Docket EPA-HQ-OPP-2025-0286, FRL-13571-01-OCSPP.
+
+This regulation establishes an exemption from the requirement of a tolerance for residues of alpha-d-glucopyranoside, beta-d- fructofuranosyl, mixed palmitates and stearates (CAS Reg. No. 84066-95- 5) when used as an inert ingredient (surfactant) on growing crops pre- harvest at no more than 12% of the final pesticide formulation. Elicit Plant S.A.S submitted a petition to EPA under the Federal Food, Drug, and Cosmetic Act (FFDCA), requesting establishment of an exemption from the requirement of a tolerance. This regulation eliminates the need to establish a maximum permissible level for residues of alpha-d- glucopyranoside, beta-d-fructofuranosyl, mixed palmitates and stearates, when used in accordance with the terms of this exemption.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Confidential Business Information Claims Under the Toxic Substances Control Act (TSCA) (Renewal)</title>
+  <id>https://www.federalregister.gov/d/2026-17506</id>
+  <updated>2026-08-27T00:00:00Z</updated>
+  <published>2026-08-27T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/27/2026-17506/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17506.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="EPA" />
+  <summary type="text">Notice. Environmental Protection Agency. Published 2026-08-27. Comments close 2026-09-28. Docket EPA-EPA-HQ-OPPT-2025-3955, FRL-13606-01-OFA.
+
+The Environmental Protection Agency (EPA) has submitted an information collection request (ICR), Confidential Business Information Claims under the Toxic Substances Control Act (TSCA) (EPA ICR Number 2706.03, OMB Control Number 2070-0223) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act. This is a proposed extension of the ICR, which is currently approved through August 31, 2026. Public comments were previously requested via the Federal Register on April 27, 2026 during a 60-day comment period. This notice allows for an additional 30 days for public comments.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Performance Evaluation Studies on Wastewater Laboratories (Renewal)</title>
+  <id>https://www.federalregister.gov/d/2026-17504</id>
+  <updated>2026-08-27T00:00:00Z</updated>
+  <published>2026-08-27T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/27/2026-17504/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17504.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="EPA" />
+  <summary type="text">Notice. Environmental Protection Agency. Published 2026-08-27. Comments close 2026-09-28. Docket EPA-HQ-OECA-2013-0547, FRL-13607-01-OFA.
+
+The Environmental Protection Agency (EPA) has submitted an information collection request (ICR), Performance Evaluation Studies on Wastewater Laboratories (EPA ICR Number 0234.15, OMB Control Number 2080-0021) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act. This is a proposed extension of the ICR, which is currently approved through August 31, 2026. Public comments were previously requested via the Federal Register on May 21, 2026 during a 60-day comment period. This notice allows for an additional 30 days for public comments.</summary>
+ </entry>
+ <entry>
+  <title>Air Plan Approval; Mississippi; 2010 1-Hour SO2 NAAQS Transport Infrastructure</title>
+  <id>https://www.federalregister.gov/d/2026-17503</id>
+  <updated>2026-08-27T00:00:00Z</updated>
+  <published>2026-08-27T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/27/2026-17503/air-plan-approval-mississippi-2010-1-hour-so2-naaqs-transport-infrastructure" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17503.pdf" type="application/pdf" />
+  <category term="Proposed Rule" />
+  <category term="EPA" />
+  <summary type="text">Proposed Rule. Environmental Protection Agency. Published 2026-08-27. Comments close 2026-09-17. Docket EPA-R04-OAR-2023-0227, FRL-13502-01-R4.
+
+Pursuant to the Federal Clean Air Act (CAA or the Act), the U.S. Environmental Protection Agency (EPA or Agency) is proposing to approve a State Implementation Plan (SIP) revision submitted by the State of Mississippi, through the Mississippi Department of Environmental Quality (MDEQ), on January 27, 2022, for the purpose of complying with the "good neighbor" provision of the CAA for the 2010 1-hour sulfur dioxide (SO2) primary National Ambient Air Quality Standard (NAAQS). The good neighbor provision requires each State's implementation plan to contain adequate provisions prohibiting the interstate transport of air pollution in amounts that will contribute significantly to nonattainment, or interfere with maintenance, of a NAAQS in any other State. In this proposed rulemaking, the EPA is proposing to determine that Mississippi will not contribute significantly to nonattainment or interfere with maintenance of the 2010 1-hour SO2 primary NAAQS in any other State. Therefore, the EPA is proposing to approve the January 27, 2022, SIP revision as meeting the requirements of the good neighbor provision for the 2010 1-hour SO2 primary NAAQS.</summary>
+ </entry>
+ <entry>
+  <title>Bangor-Pacific Hydro Associates; Notice of Reasonable Period of Time for Water Quality Certification Application</title>
+  <id>https://www.federalregister.gov/d/2026-17257</id>
+  <updated>2026-08-24T00:00:00Z</updated>
+  <published>2026-08-24T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/24/2026-17257/bangor-pacific-hydro-associates-notice-of-reasonable-period-of-time-for-water-quality-certification" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17257.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-08-24. Docket Project No. 2600-088.</summary>
+ </entry>
+ <entry>
+  <title>Combined Notice of Filings #1</title>
+  <id>https://www.federalregister.gov/d/2026-17246</id>
+  <updated>2026-08-24T00:00:00Z</updated>
+  <published>2026-08-24T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/24/2026-17246/combined-notice-of-filings-1" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17246.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-08-24.</summary>
+ </entry>
+ <entry>
+  <title>Combined Notice of Filings</title>
+  <id>https://www.federalregister.gov/d/2026-17245</id>
+  <updated>2026-08-24T00:00:00Z</updated>
+  <published>2026-08-24T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/24/2026-17245/combined-notice-of-filings" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17245.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-08-24.</summary>
+ </entry>
+ <entry>
+  <title>Natural Gas Pipeline Company of America LLC; Horizon Pipeline Company, L.L.C.; Notice of Application and Establishing Intervention Deadline</title>
+  <id>https://www.federalregister.gov/d/2026-17243</id>
+  <updated>2026-08-24T00:00:00Z</updated>
+  <published>2026-08-24T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/24/2026-17243/natural-gas-pipeline-company-of-america-llc-horizon-pipeline-company-llc-notice-of-application-and" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17243.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-08-24. Docket Docket No. CP26-564-000.</summary>
+ </entry>
+ <entry>
+  <title>Brookfield White Pine LLC; Notice of Application for Temporary Variance Accepted for Filing, Soliciting Comments, Motions To Intervene, and Protests</title>
+  <id>https://www.federalregister.gov/d/2026-17105</id>
+  <updated>2026-08-21T00:00:00Z</updated>
+  <published>2026-08-21T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/21/2026-17105/brookfield-white-pine-llc-notice-of-application-for-temporary-variance-accepted-for-filing" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17105.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="FERC" />
+  <summary type="text">Notice. Energy Department; Federal Energy Regulatory Commission. Published 2026-08-21. Docket Project No. 2194-049.</summary>
+ </entry>
+ <entry>
+  <title>Filing Plats of Survey; New Mexico, Oklahoma</title>
+  <id>https://www.federalregister.gov/d/2026-17018</id>
+  <updated>2026-08-20T00:00:00Z</updated>
+  <published>2026-08-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/20/2026-17018/filing-plats-of-survey-new-mexico-oklahoma" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-17018.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BLM" />
+  <summary type="text">Notice. Interior Department; Land Management Bureau. Published 2026-08-20. Docket A2407-014-004-065516, #O2509-014-004-125222, LLNM931000.
+
+The plats of survey and the supplemental plat of the following described lands are scheduled to be officially filed 30 calendar days after the date of this publication in the Bureau of Land Management (BLM) New Mexico State Office. The surveys and plat announced in this notice are necessary for the management of these lands.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Coal Management</title>
+  <id>https://www.federalregister.gov/d/2026-16992</id>
+  <updated>2026-08-20T00:00:00Z</updated>
+  <published>2026-08-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/20/2026-16992/agency-information-collection-activities-coal-management" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16992.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BLM" />
+  <summary type="text">Notice. Interior Department; Land Management Bureau. Published 2026-08-20. Comments close 2026-10-19. Docket A2407-014-004-065516, #O2509-014-004-125222, LLHQ320000L13200000.
+
+In accordance with the Paperwork Reduction Act of 1995 (PRA), the Bureau of Land Management (BLM) proposes extending an expiring information collection.</summary>
+ </entry>
+ <entry>
+  <title>Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Information Required To Cross Private Land for Access to BLM Lands</title>
+  <id>https://www.federalregister.gov/d/2026-16527</id>
+  <updated>2026-08-13T00:00:00Z</updated>
+  <published>2026-08-13T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/13/2026-16527/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-13/pdf/2026-16527.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BLM" />
+  <summary type="text">Notice. Interior Department; Land Management Bureau. Published 2026-08-13. Comments close 2026-09-14. Docket A2407-014-004-065516, #O2509-014-004-125222, LLHQ/LLNMP01000.
+
+In accordance with the Paperwork Reduction Act of 1995 (PRA), the Bureau of Land Management (BLM) is requesting approval for a new information collection.</summary>
+ </entry>
+ <entry>
+  <title>Public Land Order No. 7969; Withdrawal Revocation Calcasieu Radio Beacon Station, Calcasieu, Cameron Parish, Louisiana</title>
+  <id>https://www.federalregister.gov/d/2026-16295</id>
+  <updated>2026-08-11T00:00:00Z</updated>
+  <published>2026-08-11T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/11/2026-16295/public-land-order-no-7969-withdrawal-revocation-calcasieu-radio-beacon-station-calcasieu-cameron" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16295.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BLM" />
+  <summary type="text">Notice. Interior Department; Land Management Bureau. Published 2026-08-11. Effective 2026-08-11. Docket A2407-014-004-065515, O2509-014-004-125222, LLESJ0000, LAES-106743780.
+
+This order revokes a withdrawal created by an Executive Order dated November 22, 1875, which reserved land at the mouth of the Calcasieu River in Louisiana for lighthouse purposes. The approximately 2.97-acres identified for return to the public domain has been managed for lighthouse purposes since 1875. The public land was closed to the general land laws and location and entry under the United States mining laws. The Bureau of Land Management (BLM) has evaluated the land and determined it is suitable for return to the public domain.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Allowing Fireworks Certification Agencies (FCAs) To Approve Professional Fireworks</title>
+  <id>https://www.federalregister.gov/d/2026-16111</id>
+  <updated>2026-08-07T00:00:00Z</updated>
+  <published>2026-08-07T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/07/2026-16111/hazardous-materials-allowing-fireworks-certification-agencies-fcas-to-approve-professional-fireworks" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16111.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="PHMSA" />
+  <summary type="text">Rule. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-08-07. Effective 2026-09-08. Docket Docket No. PHMSA-2025-0105 (HM-268Q).
+
+This final rule expands the authority of a Fireworks Certification Agency (FCA) to obtain the ability to approve fireworks constructed to certain requirements. These amendments will streamline PHMSA's fireworks approval process and provide the industry with improved regulatory flexibility.</summary>
+ </entry>
+ <entry>
+  <title>Proposed Reinstatement of Terminated Oil and Gas Lease WYW179793, Wyoming</title>
+  <id>https://www.federalregister.gov/d/2026-16072</id>
+  <updated>2026-08-06T00:00:00Z</updated>
+  <published>2026-08-06T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/06/2026-16072/proposed-reinstatement-of-terminated-oil-and-gas-lease-wyw179793-wyoming" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16072.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="Interior" />
+  <category term="BLM" />
+  <summary type="text">Notice. Interior Department; Land Management Bureau. Published 2026-08-06. Docket A2407-014-004-065516, #O2509-014-004-125222, LLWY920000. L57000000.FI0000. 17XL5017AR.
+
+In accordance with the Mineral Leasing Act of 1920, as amended, the Bureau of Land Management (BLM) received a petition for reinstatement of terminated competitive oil and gas lease WYW179793 in Converse County, Wyoming. The lessee filed the petition for reinstatement on time and has met all filing requirements. No leases were issued that affect these lands. The Bureau of Land Management proposes to reinstate the lease.</summary>
+ </entry>
+ <entry>
+  <title>Investment Company Governance Technical Amendments</title>
+  <id>https://www.federalregister.gov/d/2026-16066</id>
+  <updated>2026-08-06T00:00:00Z</updated>
+  <published>2026-08-06T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/06/2026-16066/investment-company-governance-technical-amendments" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16066.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="SEC" />
+  <summary type="text">Rule. Securities and Exchange Commission. Published 2026-08-06. Effective 2026-08-06. Docket Release No. IC-36282.
+
+The Securities and Exchange Commission (the "Commission") is adopting technical amendments to a rule under the Investment Company Act of 1940 (the "Investment Company Act") related to registered investment company and business development company (collectively "regulated funds") governance standards to reflect a Federal court's vacatur of certain amendments to those standards that the Commission adopted on July 27, 2004. The court's vacatur of the amendments was effective as of July 6, 2006, and had the legal effect of reverting the fund governance standards to those standards in effect before adoption of the vacated requirements. These technical amendments revise the Code of Federal Regulations (the "CFR") to reflect the court's vacatur.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Notice of Actions on Special Permits</title>
+  <id>https://www.federalregister.gov/d/2026-15973</id>
+  <updated>2026-08-06T00:00:00Z</updated>
+  <published>2026-08-06T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/06/2026-15973/hazardous-materials-notice-of-actions-on-special-permits" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15973.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-08-06. Comments close 2026-09-08.
+
+In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has granted or denied the application described herein.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Notice of Applications for Modification to Special Permits</title>
+  <id>https://www.federalregister.gov/d/2026-15972</id>
+  <updated>2026-08-06T00:00:00Z</updated>
+  <published>2026-08-06T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/06/2026-15972/hazardous-materials-notice-of-applications-for-modification-to-special-permits" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15972.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-08-06. Comments close 2026-08-21.
+
+In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.</summary>
+ </entry>
+ <entry>
+  <title>Hazardous Materials: Notice of Applications for New Special Permits</title>
+  <id>https://www.federalregister.gov/d/2026-15971</id>
+  <updated>2026-08-06T00:00:00Z</updated>
+  <published>2026-08-06T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/08/06/2026-15971/hazardous-materials-notice-of-applications-for-new-special-permits" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15971.pdf" type="application/pdf" />
+  <category term="Notice" />
+  <category term="PHMSA" />
+  <summary type="text">Notice. Transportation Department; Pipeline and Hazardous Materials Safety Administration. Published 2026-08-06. Comments close 2026-09-08.
+
+In accordance with the procedures governing the application for, and the processing of, special permits from the Department of Transportation's Hazardous Material Regulations, notice is hereby given that the Office of Hazardous Materials Safety has received the application described herein.</summary>
+ </entry>
+ <entry>
+  <title>Modernization of Delegations of Authority to Commission Staff</title>
+  <id>https://www.federalregister.gov/d/2026-14540</id>
+  <updated>2026-07-20T00:00:00Z</updated>
+  <published>2026-07-20T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/07/20/2026-14540/modernization-of-delegations-of-authority-to-commission-staff" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-07-20/pdf/2026-14540.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="SEC" />
+  <summary type="text">Rule. Securities and Exchange Commission. Published 2026-07-20. Effective 2026-07-26. Docket Release Nos. 33-11431, 34-105923, IC-36254, IA-6981.
+
+The Securities and Exchange Commission (the "Commission") is amending its rules delegating authority to the Commission's staff to further modernize these rules, to better reflect the way the Commission conducts its business, and to more efficiently use the Commission's resources.</summary>
+ </entry>
+ <entry>
+  <title>Financial Data Transparency Act Joint Data Standards</title>
+  <id>https://www.federalregister.gov/d/2026-12787</id>
+  <updated>2026-06-25T00:00:00Z</updated>
+  <published>2026-06-25T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/06/25/2026-12787/financial-data-transparency-act-joint-data-standards" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12787.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="CFTC" />
+  <category term="SEC" />
+  <summary type="text">Rule. Treasury Department; Comptroller of the Currency; Federal Reserve System; Federal Deposit Insurance Corporation; National Credit Union Administration; Consumer Financial Protection Bureau; Federal Housing Finance Agency; Commodity Futures Trading Commission; Securities and Exchange Commission. Published 2026-06-25. Effective 2026-10-01. Docket Docket ID OCC-2024-0012, Docket No. R-1837, Docket No. CFPB-2024-0034, Release No. 33-11420, 34-105536.
+
+The OCC, Board, FDIC, NCUA, CFPB, FHFA, CFTC, SEC, and Treasury are publishing a final joint rule to establish data standards to promote interoperability of financial regulatory data across these agencies. The standards established pursuant to this joint rule will later be considered for potential incorporation (to the extent feasible) into data standards to be adopted for certain collections of information in separate rulemakings by the agencies or through other actions taken by the agencies. At the effective date, the joint rule will not change any reporting requirements without further action by the agencies. The agencies are publishing this joint rule as required by the Financial Data Transparency Act of 2022.</summary>
+ </entry>
+ <entry>
+  <title>Technical Amendments to Form X-17A-5 Part IIA</title>
+  <id>https://www.federalregister.gov/d/2026-12779</id>
+  <updated>2026-06-25T00:00:00Z</updated>
+  <published>2026-06-25T00:00:00Z</published>
+  <link rel="alternate" href="https://www.federalregister.gov/documents/2026/06/25/2026-12779/technical-amendments-to-form-x-17a-5-part-iia" type="text/html" />
+  <link rel="enclosure" href="https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12779.pdf" type="application/pdf" />
+  <category term="Rule" />
+  <category term="SEC" />
+  <summary type="text">Rule. Securities and Exchange Commission. Published 2026-06-25. Effective 2026-06-25. Docket Release No. 34-105746.
+
+The Securities and Exchange Commission is adopting technical amendments to Form X-17A-5 ("FOCUS Report") Part IIA under the Securities Exchange Act of 1934 ("Exchange Act").</summary>
+ </entry>
+</feed>

@@ -1,0 +1,377 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&conditions[agencies][]=federal-energy-regulatory-commission&conditions[publication_date][gte]=2026-10-15",
+   "count": 28,
+   "total_pages": 6,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=federal-energy-regulatory-commission&conditions%5Bpublication_date%5D%5Bgte%5D=2026-10-15&format=json&page=2&per_page=5&search_after_cursor=WzE3OTI0NTQ0MDAwMDAsIjIwMjYtMjE0NDIiXQ",
+   "results": [
+    {
+     "document_number": "2026-21490",
+     "title": "Combined Notice of Filings",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21490/combined-notice-of-filings",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21490.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21489",
+     "title": "Combined Notice of Filings #1",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21489/combined-notice-of-filings-1",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21489.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21487",
+     "title": "Combined Notice of Filings #2",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21487/combined-notice-of-filings-2",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21487.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21443",
+     "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+     "type": "Proposed Rule",
+     "abstract": "The Federal Energy Regulatory Commission proposes to revise its regulations to establish procedures for authorizing activities at liquefied natural gas plants without case-specific authorization orders under sections 3 or 7 of the Natural Gas Act.",
+     "publication_date": "2026-10-20",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/20/2026-21443/authorizations-for-certain-activities-at-liquefied-natural-gas-plants",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": "2026-12-21",
+     "effective_on": null,
+     "docket_ids": [
+      "Docket No. RM26-2-001"
+     ],
+     "regulation_id_numbers": [
+      "1902-AG43"
+     ],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21442",
+     "title": "Environmental Review of Natural Gas Act Applications; Notice of Availability of Draft Policy Statement on Efficient Environmental Reviews of Natural Gas Project Applications",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-10-20",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/20/2026-21442/environmental-review-of-natural-gas-act-applications-notice-of-availability-of-draft-policy",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21442.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "Docket No. PL26-3-000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  },
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=federal-energy-regulatory-commission",
+   "count": 10000,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=federal-energy-regulatory-commission&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3ODcyNzA0MDAwMDAsIjIwMjYtMTcxMDUiXQ",
+   "results": [
+    {
+     "document_number": "2026-17257",
+     "title": "Bangor-Pacific Hydro Associates; Notice of Reasonable Period of Time for Water Quality Certification Application",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-08-24",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/24/2026-17257/bangor-pacific-hydro-associates-notice-of-reasonable-period-of-time-for-water-quality-certification",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17257.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "Project No. 2600-088"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17246",
+     "title": "Combined Notice of Filings #1",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-08-24",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/24/2026-17246/combined-notice-of-filings-1",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17246.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17245",
+     "title": "Combined Notice of Filings",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-08-24",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/24/2026-17245/combined-notice-of-filings",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17245.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17243",
+     "title": "Natural Gas Pipeline Company of America LLC; Horizon Pipeline Company, L.L.C.; Notice of Application and Establishing Intervention Deadline",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-08-24",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/24/2026-17243/natural-gas-pipeline-company-of-america-llc-horizon-pipeline-company-llc-notice-of-application-and",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17243.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "Docket No. CP26-564-000"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17105",
+     "title": "Brookfield White Pine LLC; Notice of Application for Temporary Variance Accepted for Filing, Soliciting Comments, Motions To Intervene, and Protests",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-08-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/21/2026-17105/brookfield-white-pine-llc-notice-of-application-for-temporary-variance-accepted-for-filing",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17105.pdf",
+     "agencies": [
+      {
+       "raw_name": "DEPARTMENT OF ENERGY",
+       "name": "Energy Department",
+       "slug": "energy-department",
+       "id": 136,
+       "url": "https://www.federalregister.gov/agencies/energy-department",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+       "parent_id": null
+      },
+      {
+       "raw_name": "Federal Energy Regulatory Commission",
+       "name": "Federal Energy Regulatory Commission",
+       "slug": "federal-energy-regulatory-commission",
+       "id": 167,
+       "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+       "parent_id": 136
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "Project No. 2194-049"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=commodity-futures-trading-commission",
+   "count": 4072,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=commodity-futures-trading-commission&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3OTE4NDk2MDAwMDAsIjIwMjYtMjA4ODgiXQ",
+   "results": [
+    {
+     "document_number": "2026-21492",
+     "title": "Agency Information Collection Activities Under OMB Review",
+     "type": "Notice",
+     "abstract": "In compliance with the Paperwork Reduction Act of 1995 (\"PRA\"), this notice announces that the Information Collection Request (\"ICR\") abstracted below has been forwarded to the Office of Information and Regulatory Affairs (\"OIRA\"), of the Office of Management and Budget (\"OMB\"), for review and comment. The ICR describes the nature of the information collection and its expected costs and burden.",
+     "publication_date": "2026-10-21",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21492/agency-information-collection-activities-under-omb-review",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21492.pdf",
+     "agencies": [
+      {
+       "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+       "name": "Commodity Futures Trading Commission",
+       "slug": "commodity-futures-trading-commission"
+      }
+     ],
+     "comments_close_on": "2026-11-20",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21377",
+     "title": "Further Definition of “Swap”-Inclusions",
+     "type": "Proposed Rule",
+     "abstract": "Consistent with its jurisdiction over swaps, the Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is proposing to further define the term \"swap\" to explicitly include event contracts, including those based on sports-, politics-, cultural-, and weather- related events (the \"Proposal\").",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21377/further-definition-of-swap-inclusions",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21377.pdf",
+     "agencies": [
+      {
+       "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+       "name": "Commodity Futures Trading Commission",
+       "slug": "commodity-futures-trading-commission"
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [
+      "3038-AF82"
+     ],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21376",
+     "title": "Further Definition of “Swap” To Exclude Casino-Style Gambling Products",
+     "type": "Rule",
+     "abstract": "The Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is adopting an interim final rule (\"Interim Final Rule\") to codify its longstanding position that casino-style gambling products, including wagers placed on sportsbooks and casino games, are excluded from the \"swap\" definition.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21376/further-definition-of-swap-to-exclude-casino-style-gambling-products",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21376.pdf",
+     "agencies": [
+      {
+       "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+       "name": "Commodity Futures Trading Commission",
+       "slug": "commodity-futures-trading-commission"
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": "2026-10-19",
+     "docket_ids": [],
+     "regulation_id_numbers": [
+      "3038-AF81"
+     ],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21275",
+     "title": "Agency Information Collection Activities: Notice of Intent To Extend Collection 3038-0093, Part 40, Provisions Common to Registered Entities",
+     "type": "Notice",
+     "abstract": "The Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is announcing an opportunity for public comment on the proposed renewal of a collection of certain information by the agency. Under the Paperwork Reduction Act (\"PRA\"), Federal agencies are required to publish notice in the Federal Register concerning each proposed collection of information, including each proposed extension of an existing collection of information, and to allow 60 days for public comment. This notice solicits comments on collections of information provided for by Part 40 of the Commission's regulations, Provisions Common to Registered Entities.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21275/agency-information-collection-activities-notice-of-intent-to-extend-collection-3038-0093-part-40",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21275.pdf",
+     "agencies": [
+      {
+       "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+       "name": "Commodity Futures Trading Commission",
+       "slug": "commodity-futures-trading-commission"
+      }
+     ],
+     "comments_close_on": "2026-12-18",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-20888",
+     "title": "Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets",
+     "type": "Proposed Rule",
+     "abstract": "The Commodity Futures Trading Commission (\"Commission\" or \"CFTC\") is issuing an advanced notice of proposed rulemaking regarding section 2(c)(2)(D) of the Commodity Exchange Act (\"CEA\" or \"Act\") to provide notice and seek public comment on its intent to develop and establish fit-for-purpose rules implementing section 2(c)(2)(D) of the Act with respect to transactions and markets in crypto assets.",
+     "publication_date": "2026-10-13",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/13/2026-20888/regulation-crypto-asset-transactions-and-regulation-crypto-asset-markets",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-13/pdf/2026-20888.pdf",
+     "agencies": [
+      {
+       "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+       "name": "Commodity Futures Trading Commission",
+       "slug": "commodity-futures-trading-commission"
+      }
+     ],
+     "comments_close_on": "2026-12-14",
+     "effective_on": null,
+     "docket_ids": [],
+     "regulation_id_numbers": [
+      "3038-AF80"
+     ],
+     "significant": null
+    }
+   ]
+  }
+ ]
+}

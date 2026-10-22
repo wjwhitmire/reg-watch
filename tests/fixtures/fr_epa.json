@@ -1,0 +1,303 @@
+{
+ "_provenance": {
+  "source": "Federal Register API v1 (https://www.federalregister.gov/developers/documentation/api/v1). Public domain US government data.",
+  "retrieved": "2026-10-21",
+  "method": "Retrieved with an agent WebFetch tool because the build sandbox has no direct network access. Each 'responses' entry is one GET of the list endpoint shown in 'request'; count, total_pages and next_page_url are as returned. The list endpoint's default field set omits comments_close_on, effective_on, docket_ids, regulation_id_numbers and significant, so those five fields were retrieved separately from the document detail endpoint (/api/v1/documents/<numbers>.json) for the same document numbers and merged into each record. Values were transcribed field by field from the tool output, not hand-written. No document was invented. html_url and pdf_url are the exact URLs the API returned."
+ },
+ "responses": [
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&conditions[agencies][]=environmental-protection-agency&conditions[publication_date][gte]=2026-10-19",
+   "count": 5,
+   "total_pages": 1,
+   "next_page_url": null,
+   "results": [
+    {
+     "document_number": "2026-21383",
+     "title": "New Source Performance Standards and National Emission Standards for Hazardous Air Pollutants; Delegation of Authority to Northwest Clean Air Agency, Washington State",
+     "type": "Proposed Rule",
+     "abstract": "The Northwest Clean Air Agency (NWCAA), located in Washington State, submitted updated regulations for receiving delegation and approval of its program for the implementation and enforcement of newly issued or revised New Source Performance Standards (NSPS) and National Emission Standards for Hazardous Air Pollutants (NESHAP), as provided for under previously approved delegation mechanisms. The updated regulations incorporate by reference certain NSPS and NESHAP promulgated by the Environmental Protection Agency (EPA) as they existed through October 18, 2023. The EPA is providing notice that it is proposing to update the delegation of certain NSPS and approve the delegation of certain NESHAP to NWCAA. The proposed delegation of authority under this action does not apply to sources located in Indian country.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21383/new-source-performance-standards-and-national-emission-standards-for-hazardous-air-pollutants",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21383.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-R10-OAR-2026-4291, FRL-13409-01-R10"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21289",
+     "title": "Air Quality Plan; Arizona; Agricultural Best Management Practices Rules for the West Pinal County PM10 Nonattainment Area",
+     "type": "Proposed Rule",
+     "abstract": "The U.S. Environmental Protection Agency (EPA) is proposing to approve a revision to the Arizona Department of Environmental Quality (ADEQ or \"State\") portion of the Arizona State Implementation Plan (SIP). This revision concerns emissions of particulate matter (PM) that are 10 micrometers ([mu]m) or smaller in diameter (PM<INF>10</INF>) from agricultural crop and animal operations in the West Pinal County PM<INF>10</INF> nonattainment area. We are proposing to approve two local rules to regulate these emission sources under the Clean Air Act (CAA or \"Act\").",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21289/air-quality-plan-arizona-agricultural-best-management-practices-rules-for-the-west-pinal-county-pm10",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21289.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-R09-OAR-2024-0600",
+      "FRL-13422-01-R9"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21288",
+     "title": "Approval and Promulgation of Implementation Plans-Pinal County (Part); West Pinal, AZ PM10 Nonattainment Area; Moderate Area, Serious Area, and Section 189(d) Plan for Attainment of the 24-Hour PM10 Standard",
+     "type": "Proposed Rule",
+     "abstract": "The U.S. Environmental Protection Agency (EPA) is proposing to approve a state implementation plan (SIP) revision submitted by the State of Arizona to meet Clean Air Act (CAA or \"Act\") requirements applicable to the Pinal County (Part); West Pinal PM<INF>10</INF> nonattainment area (\"West Pinal County PM<INF>10</INF> Nonattainment Area\"). The EPA is proposing to find that the submitted SIP revision meets all applicable \"Moderate\" area, \"Serious\" area, and CAA section 189(d) requirements for the PM<INF>10</INF> national ambient air quality standards (NAAQS). Additionally, the EPA is proposing to approve the PM<INF>10</INF> motor vehicle emissions budgets included with the SIP revision for transportation conformity purposes. The EPA is also starting the adequacy process for these budgets. Our proposed approval of the SIP revision would establish an attainment date of December 31, 2026, for the area.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21288/approval-and-promulgation-of-implementation-plans-pinal-county-part-west-pinal-az-pm10-nonattainment",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21288.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-R09-OAR-2026-5119",
+      "FRL-13482-01-R9"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21287",
+     "title": "Air Quality Plan; Arizona; Pinal County Air Quality Control District; West Pinal County PM10 Nonattainment Area; Fugitive Dust Rules",
+     "type": "Proposed Rule",
+     "abstract": "The U.S. Environmental Protection Agency (EPA) is proposing to approve revisions to the Pinal County Air Quality Control District (PCAQCD or \"District\") portion of the Arizona State Implementation Plan (SIP). These revisions concern emissions of particulate matter (PM) that is 10 micrometers or smaller in diameter (PM<INF>10</INF>) from fugitive dust sources, including open areas/vacant lots, unpaved lots, unpaved roads, paved public roadways, and construction sites. We are proposing to approve local rules to regulate these emission sources under the Clean Air Act (CAA or \"Act\").",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21287/air-quality-plan-arizona-pinal-county-air-quality-control-district-west-pinal-county-pm10",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21287.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-11-18",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-R09-OAR-2026-5581",
+      "FRL-13513-01-R9"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-21268",
+     "title": "Approval and Promulgation of Implementation Plans; Arizona; Revisions to the Cleaner Burning Gasoline, Winter Oxygenated Fuel, and Gasoline Set-Aside Programs",
+     "type": "Rule",
+     "abstract": "The U.S. Environmental Protection Agency (EPA) is finalizing an approval of a revision to the Arizona State Implementation Plan (SIP) submitted by the Arizona Department of Environmental Quality (ADEQ). This revision includes statutes and regulations amending the Cleaner Burning Gasoline (CBG) program, which is a control measure in the greater Phoenix metropolitan area to reduce emissions of ozone- forming pollutants, carbon monoxide (CO), and particulate matter. Additionally, this revision addresses the Winter Oxygenated Fuel program to control CO emissions in the Tucson area. Finally, this revision repeals the Arizona Gasoline Set[hyphen]aside (GSA) Program, applicable to the 1971 carbon monoxide nonattainment area covering Maricopa County and a portion of Pima County. This SIP revision is administrative in nature. This final action updates the existing SIP- approved CBG program with revisions that have been adopted and implemented by the State to clarify requirements, update references, and enhance flexibility of the program and will not impose any additional costs or regulatory burdens.",
+     "publication_date": "2026-10-19",
+     "html_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21268/approval-and-promulgation-of-implementation-plans-arizona-revisions-to-the-cleaner-burning-gasoline",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21268.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-11-18",
+     "docket_ids": [
+      "EPA-R09-OAR-2023-0054",
+      "FRL-12607-02-R9"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  },
+  {
+   "request": "https://www.federalregister.gov/api/v1/documents.json?per_page=5&order=newest&conditions[agencies][]=environmental-protection-agency",
+   "count": 10000,
+   "total_pages": 50,
+   "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagencies%5D%5B%5D=environmental-protection-agency&format=json&order=newest&page=2&per_page=5&search_after_cursor=WzE3ODc3ODg4MDAwMDAsIjIwMjYtMTc1MDMiXQ",
+   "results": [
+    {
+     "document_number": "2026-17606",
+     "title": "Environmental Impact Statements; Notice of Availability",
+     "type": "Notice",
+     "abstract": null,
+     "publication_date": "2026-08-28",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17606/environmental-impact-statements-notice-of-availability",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-28/pdf/2026-17606.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": null,
+     "docket_ids": [
+      "FRL OPRM-FAD-237"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17579",
+     "title": "Alpha-d-Glucopyranoside, Beta-d-Fructofuranosyl, Mixed Palmitates and Stearates in Pesticide Formulations; Exemption From the Requirement of a Tolerance",
+     "type": "Rule",
+     "abstract": "This regulation establishes an exemption from the requirement of a tolerance for residues of alpha-d-glucopyranoside, beta-d- fructofuranosyl, mixed palmitates and stearates (CAS Reg. No. 84066-95- 5) when used as an inert ingredient (surfactant) on growing crops pre- harvest at no more than 12% of the final pesticide formulation. Elicit Plant S.A.S submitted a petition to EPA under the Federal Food, Drug, and Cosmetic Act (FFDCA), requesting establishment of an exemption from the requirement of a tolerance. This regulation eliminates the need to establish a maximum permissible level for residues of alpha-d- glucopyranoside, beta-d-fructofuranosyl, mixed palmitates and stearates, when used in accordance with the terms of this exemption.",
+     "publication_date": "2026-08-28",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17579/alpha-d-glucopyranoside-beta-d-fructofuranosyl-mixed-palmitates-and-stearates-in-pesticide",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-28/pdf/2026-17579.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": null,
+     "effective_on": "2026-08-28",
+     "docket_ids": [
+      "EPA-HQ-OPP-2025-0286",
+      "FRL-13571-01-OCSPP"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17506",
+     "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Confidential Business Information Claims Under the Toxic Substances Control Act (TSCA) (Renewal)",
+     "type": "Notice",
+     "abstract": "The Environmental Protection Agency (EPA) has submitted an information collection request (ICR), Confidential Business Information Claims under the Toxic Substances Control Act (TSCA) (EPA ICR Number 2706.03, OMB Control Number 2070-0223) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act. This is a proposed extension of the ICR, which is currently approved through August 31, 2026. Public comments were previously requested via the Federal Register on April 27, 2026 during a 60-day comment period. This notice allows for an additional 30 days for public comments.",
+     "publication_date": "2026-08-27",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/27/2026-17506/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17506.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-09-28",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-EPA-HQ-OPPT-2025-3955",
+      "FRL-13606-01-OFA"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17504",
+     "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Performance Evaluation Studies on Wastewater Laboratories (Renewal)",
+     "type": "Notice",
+     "abstract": "The Environmental Protection Agency (EPA) has submitted an information collection request (ICR), Performance Evaluation Studies on Wastewater Laboratories (EPA ICR Number 0234.15, OMB Control Number 2080-0021) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act. This is a proposed extension of the ICR, which is currently approved through August 31, 2026. Public comments were previously requested via the Federal Register on May 21, 2026 during a 60-day comment period. This notice allows for an additional 30 days for public comments.",
+     "publication_date": "2026-08-27",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/27/2026-17504/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17504.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-09-28",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-HQ-OECA-2013-0547",
+      "FRL-13607-01-OFA"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    },
+    {
+     "document_number": "2026-17503",
+     "title": "Air Plan Approval; Mississippi; 2010 1-Hour SO2 NAAQS Transport Infrastructure",
+     "type": "Proposed Rule",
+     "abstract": "Pursuant to the Federal Clean Air Act (CAA or the Act), the U.S. Environmental Protection Agency (EPA or Agency) is proposing to approve a State Implementation Plan (SIP) revision submitted by the State of Mississippi, through the Mississippi Department of Environmental Quality (MDEQ), on January 27, 2022, for the purpose of complying with the \"good neighbor\" provision of the CAA for the 2010 1-hour sulfur dioxide (SO<INF>2</INF>) primary National Ambient Air Quality Standard (NAAQS). The good neighbor provision requires each State's implementation plan to contain adequate provisions prohibiting the interstate transport of air pollution in amounts that will contribute significantly to nonattainment, or interfere with maintenance, of a NAAQS in any other State. In this proposed rulemaking, the EPA is proposing to determine that Mississippi will not contribute significantly to nonattainment or interfere with maintenance of the 2010 1-hour SO<INF>2</INF> primary NAAQS in any other State. Therefore, the EPA is proposing to approve the January 27, 2022, SIP revision as meeting the requirements of the good neighbor provision for the 2010 1-hour SO<INF>2</INF> primary NAAQS.",
+     "publication_date": "2026-08-27",
+     "html_url": "https://www.federalregister.gov/documents/2026/08/27/2026-17503/air-plan-approval-mississippi-2010-1-hour-so2-naaqs-transport-infrastructure",
+     "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-08-27/pdf/2026-17503.pdf",
+     "agencies": [
+      {
+       "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+       "name": "Environmental Protection Agency",
+       "slug": "environmental-protection-agency",
+       "id": 145,
+       "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+       "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+       "parent_id": null
+      }
+     ],
+     "comments_close_on": "2026-09-17",
+     "effective_on": null,
+     "docket_ids": [
+      "EPA-R04-OAR-2023-0227",
+      "FRL-13502-01-R4"
+     ],
+     "regulation_id_numbers": [],
+     "significant": null
+    }
+   ]
+  }
+ ]
+}
