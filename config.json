@@ -1,6 +1,6 @@
 {
-  "repo_url": "{{REPO_URL}}",
-  "site_url": "{{LIVE_URL}}",
+  "repo_url": "https://github.com/wjwhitmire/reg-watch",
+  "site_url": "https://wjwhitmire.github.io/reg-watch/",
   "agencies": [
     {"key": "CFTC", "slug": "commodity-futures-trading-commission", "label": "Commodity Futures Trading Commission"},
     {"key": "SEC", "slug": "securities-and-exchange-commission", "label": "Securities and Exchange Commission"},

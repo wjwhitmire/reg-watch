@@ -2,8 +2,8 @@
 
 A free, self-hosting tracker of US federal rulemaking for the agencies you choose. Every day a GitHub Action pulls new rules, proposed rules, notices and presidential documents from the official Federal Register API, commits them to this repository, and publishes a searchable page and Atom feeds. No servers, no keys, no subscription.
 
-**Live page:** {{LIVE_URL}}
-**Repository:** {{REPO_URL}}
+**Live page:** https://wjwhitmire.github.io/reg-watch/
+**Repository:** https://github.com/wjwhitmire/reg-watch
 
 Default agencies: CFTC, SEC, FERC, EPA, PHMSA, BSEE, BLM and the Department of the Interior. Change them in `config.json`.
 
@@ -18,7 +18,7 @@ Default agencies: CFTC, SEC, FERC, EPA, PHMSA, BSEE, BLM and the Department of t
 ## Turn it on (one time, about five minutes)
 
 1. Create an empty public repository on GitHub (for example `reg-watch`) and push this code to its `main` branch.
-2. Replace the placeholders. In `config.json` and this README, set `{{REPO_URL}}` to `https://github.com/<you>/reg-watch` and `{{LIVE_URL}}` to `https://<you>.github.io/reg-watch/`. The repo URL goes into the API User-Agent; the live URL goes into the Atom self links.
+2. Replace the placeholders. In `config.json` and this README, set `https://github.com/wjwhitmire/reg-watch` to `https://github.com/<you>/reg-watch` and `https://wjwhitmire.github.io/reg-watch/` to `https://<you>.github.io/reg-watch/`. The repo URL goes into the API User-Agent; the live URL goes into the Atom self links.
 3. **Settings > Actions > General > Workflow permissions:** select "Read and write permissions" and save. Only the `collect` job asks for `contents: write`; every other workflow stays read-only.
 4. **Settings > Pages > Build and deployment > Source:** select "GitHub Actions".
 5. **Actions tab:** enable workflows if GitHub asks. Open "collect", click "Run workflow", and enter `365` in `backfill_days` for a full first fill (or leave it blank for the last 30 days). The run commits `data/` and then deploys Pages.

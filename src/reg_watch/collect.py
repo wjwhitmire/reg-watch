@@ -54,8 +54,8 @@ class AgencyConfig:
 @dataclass
 class Config:
     agencies: list[AgencyConfig]
-    repo_url: str = "{{REPO_URL}}"
-    site_url: str = "{{LIVE_URL}}"
+    repo_url: str = "https://github.com/wjwhitmire/reg-watch"
+    site_url: str = "https://wjwhitmire.github.io/reg-watch/"
     per_page: int = 100
     retention_days: int = 365
     first_run_lookback_days: int = 30
