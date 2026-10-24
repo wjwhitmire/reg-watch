@@ -14,6 +14,7 @@ import datetime as dt
 import json
 import logging
 import os
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -58,7 +59,7 @@ class Config:
     site_url: str = "https://wjwhitmire.github.io/reg-watch/"
     per_page: int = 100
     retention_days: int = 365
-    first_run_lookback_days: int = 30
+    first_run_lookback_days: int = 365
     overlap_days: int = 3
     chunk_days: int = 31
     max_pages_per_query: int = 40
@@ -146,7 +147,27 @@ def load_config(path: str | None) -> Config:
             if not isinstance(v, (int, float)) or isinstance(v, bool) or not lo <= v <= hi:
                 raise CollectError(f"config: {k} must be a number from {lo} to {hi}")
             setattr(cfg, k, float(v))
+    _fill_urls_from_actions(cfg)
     return cfg
+
+
+_REPO_RE = re.compile(r"^([A-Za-z0-9](?:[A-Za-z0-9-]{0,38}))/([A-Za-z0-9._-]{1,100})$")
+
+
+def _fill_urls_from_actions(cfg: Config) -> None:
+    """Inside GitHub Actions the repository is known, so unfilled URL placeholders are worked
+    out from GITHUB_REPOSITORY instead of being left for the user to edit by hand."""
+    m = _REPO_RE.match(os.environ.get("GITHUB_REPOSITORY", ""))
+    if not m:
+        return
+    owner, name = m.group(1), m.group(2)
+    if "{{" in cfg.repo_url or not cfg.repo_url:
+        cfg.repo_url = f"https://github.com/{owner}/{name}"
+        log.info("repo_url taken from GITHUB_REPOSITORY: %s", cfg.repo_url)
+    if "{{" in cfg.site_url or not cfg.site_url:
+        host = f"{owner.lower()}.github.io"
+        cfg.site_url = f"https://{host}/" if name.lower() == host else f"https://{host}/{name}/"
+        log.info("site_url taken from GITHUB_REPOSITORY: %s", cfg.site_url)
 
 
 # ---------------------------------------------------------------- HTTP

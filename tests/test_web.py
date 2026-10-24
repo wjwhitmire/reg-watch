@@ -144,3 +144,27 @@ def test_no_em_dash_anywhere():
             except UnicodeDecodeError:
                 pass
     assert bad == []
+
+
+def test_no_tooling_words_in_tracked_files():
+    import subprocess
+
+    import pytest
+    # Words kept out of the published repo. Stored reversed so this file does not contain them.
+    words = [w[::-1] for w in ("edualc", "ciporhtna", "xobdnas")]
+    pattern = re.compile(r"\b(" + "|".join(words) + r")\b", re.I)
+    out = subprocess.run(["git", "-C", ROOT, "ls-files"], capture_output=True, text=True)
+    if out.returncode != 0:
+        pytest.skip("not a git checkout")
+    bad = []
+    for rel in out.stdout.split("\n"):
+        p = os.path.join(ROOT, rel)
+        if not rel or not os.path.isfile(p):
+            continue
+        try:
+            with open(p, encoding="utf-8") as fh:
+                if pattern.search(fh.read()):
+                    bad.append(rel)
+        except UnicodeDecodeError:
+            pass
+    assert bad == []

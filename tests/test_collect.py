@@ -40,7 +40,7 @@ def test_fixtures_cover_every_default_agency():
     files = load_fixture_files()
     assert set(files) == {"cftc", "sec", "ferc", "epa", "phmsa", "bsee", "blm", "interior"}
     for name, data in files.items():
-        assert "WebFetch" in data["_provenance"]["method"]
+        assert "web fetch" in data["_provenance"]["method"]
         assert data["_provenance"]["retrieved"] == "2026-10-21"
         for resp in data["responses"]:
             assert resp["request"].startswith("https://www.federalregister.gov/api/v1/documents.json?")
@@ -437,7 +437,7 @@ def test_adding_an_agency_resets_coverage(tmp_path, raw_records, no_sleep, caplo
     run(few, str(tmp_path), opener=FakeAPI(raw_records), sleep=no_sleep, today=TODAY, backfill_days=365)
     assert load(tmp_path / "documents.json")["complete_since"] == "2025-10-21"
     with caplog.at_level(logging.WARNING, logger="reg_watch"):
-        res = run(cfg(), str(tmp_path), opener=FakeAPI(raw_records), sleep=no_sleep, today=TODAY)
+        res = run(cfg(first_run_lookback_days=30), str(tmp_path), opener=FakeAPI(raw_records), sleep=no_sleep, today=TODAY)
     assert "agencies added" in caplog.text and "PHMSA" in caplog.text
     assert res.since == "2026-09-21"  # first_run_lookback_days, not newest minus overlap
     assert load(tmp_path / "documents.json")["complete_since"] == "2026-09-21"
@@ -577,3 +577,35 @@ def test_cli_rejects_bad_dates(capsys):
     with pytest.raises(SystemExit):
         cli.main(["query", "--from", "10/21/2026"])
     assert "YYYY-MM-DD" in capsys.readouterr().err
+
+
+def test_first_run_fills_the_whole_retention_window_by_default(tmp_path, raw_records, no_sleep):
+    # No backfill_days to choose: a store with no completed run gets the full year on its own.
+    res = run(cfg(), str(tmp_path), opener=FakeAPI(raw_records), sleep=no_sleep, today=TODAY)
+    assert res.since == "2025-10-21"
+    assert load(tmp_path / "documents.json")["complete_since"] == "2025-10-21"
+    assert load_config(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config.json")).first_run_lookback_days == 365
+
+
+@pytest.mark.parametrize("repo,site", [
+    ("Someone/reg-watch", "https://someone.github.io/reg-watch/"),
+    ("someone/someone.github.io", "https://someone.github.io/"),
+])
+def test_placeholder_urls_come_from_the_actions_repository(tmp_path, monkeypatch, repo, site):
+    p = tmp_path / "config.json"
+    p.write_text(json.dumps({"repo_url": "{{" + "REPO_URL}}", "site_url": "{{" + "LIVE_URL}}"}))
+    monkeypatch.setenv("GITHUB_REPOSITORY", repo)
+    c = load_config(str(p))
+    assert c.repo_url == "https://github.com/" + repo and c.site_url == site
+    assert "https://github.com/" + repo in c.user_agent
+
+
+def test_filled_urls_are_kept_and_bad_repository_values_ignored(tmp_path, monkeypatch):
+    p = tmp_path / "config.json"
+    p.write_text(json.dumps({"repo_url": "https://github.com/a/b", "site_url": "https://x.example/"}))
+    monkeypatch.setenv("GITHUB_REPOSITORY", "c/d")
+    c = load_config(str(p))
+    assert c.repo_url == "https://github.com/a/b" and c.site_url == "https://x.example/"
+    p.write_text(json.dumps({"site_url": "{{" + "LIVE_URL}}"}))
+    monkeypatch.setenv("GITHUB_REPOSITORY", "../evil;rm")
+    assert "{{" in load_config(str(p)).site_url

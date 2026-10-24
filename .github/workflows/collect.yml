@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       backfill_days:
-        description: "Fetch this many days back (blank for a normal incremental run, 365 for a full first fill)"
+        description: "Re-fetch this many days back (leave blank: the first run fills the full year by itself)"
         required: false
         default: ""
 

@@ -18,10 +18,10 @@ Default agencies: CFTC, SEC, FERC, EPA, PHMSA, BSEE, BLM and the Department of t
 ## Turn it on (one time, about five minutes)
 
 1. Create an empty public repository on GitHub (for example `reg-watch`) and push this code to its `main` branch.
-2. Replace the placeholders. In `config.json` and this README, set `https://github.com/wjwhitmire/reg-watch` to `https://github.com/<you>/reg-watch` and `https://wjwhitmire.github.io/reg-watch/` to `https://<you>.github.io/reg-watch/`. The repo URL goes into the API User-Agent; the live URL goes into the Atom self links.
+2. Nothing to edit for the links. Inside GitHub Actions the collector reads the repository name and works out the repository URL (for the API User-Agent) and the Pages URL (for the Atom self links) when `repo_url` and `site_url` in `config.json` are still the placeholders in double braces. Set them yourself only for a custom domain.
 3. **Settings > Actions > General > Workflow permissions:** select "Read and write permissions" and save. Only the `collect` job asks for `contents: write`; every other workflow stays read-only.
 4. **Settings > Pages > Build and deployment > Source:** select "GitHub Actions".
-5. **Actions tab:** enable workflows if GitHub asks. Open "collect", click "Run workflow", and enter `365` in `backfill_days` for a full first fill (or leave it blank for the last 30 days). The run commits `data/` and then deploys Pages.
+5. **Actions tab:** enable workflows if GitHub asks. Open "collect" and click "Run workflow" (or wait for the daily run). The first run fills the whole 365 day window by itself, commits `data/`, and deploys Pages. `backfill_days` is only for re-fetching later.
 6. Open the live URL. From then on the collector runs daily at 11:17 UTC and redeploys only when something changed.
 
 The repository ships with a small seed in `data/` built from the recorded API responses in `tests/fixtures/`. It is marked as a sample (`complete_since: null`), so the first live run fetches a full window instead of trusting it.
@@ -54,7 +54,7 @@ print(len(res.new), "new documents")
 | `agencies` | the eight above | list of `{key, slug, label}`. `slug` is the agency's slug on federalregister.gov (`federalregister.gov/agencies/<slug>`). `key` names the feed file and filter. |
 | `per_page` | 100 | results per API request (API maximum 1000) |
 | `retention_days` | 365 | rolling window kept in `documents.json` |
-| `first_run_lookback_days` | 30 | window for a run with no complete store |
+| `first_run_lookback_days` | 365 | window for a run with no complete store (the first run, or after an agency is added) |
 | `overlap_days` | 3 | days re-fetched before the newest stored date |
 | `chunk_days` | 31 | each query covers at most this many days, so no query needs many pages |
 | `max_pages_per_query` | 40 | safety stop; a warning is logged if reached |
@@ -128,7 +128,7 @@ These are the same in Python (`reg_watch.filters`) and in the page (`<script id=
 ## Limits
 
 - **Comment deadlines are incomplete.** `comments_close_on` is set by the Federal Register's indexing. Some notices state a deadline only in the text, some reopen or extend a period in a later document, and some meeting notices have none. Treat the closing view as a prompt to read the document, not as a docket calendar.
-- **Agency matching follows the API.** A query for a department returns its sub-agencies: Interior includes BSEE, BLM, BOEM, BIA, Fish and Wildlife and more. The `watch` list shows which configured keys matched. Remove `Interior` from the config if you only want specific bureaus. Adding an agency restarts coverage at `first_run_lookback_days`; run the collect workflow with `backfill_days` set to 365 to fill the year for it.
+- **Agency matching follows the API.** A query for a department returns its sub-agencies: Interior includes BSEE, BLM, BOEM, BIA, Fish and Wildlife and more. The `watch` list shows which configured keys matched. Remove `Interior` from the config if you only want specific bureaus. Adding an agency restarts coverage, and the next run re-fetches the full `first_run_lookback_days` window (365 by default) for every agency.
 - **Publication lag.** The API indexes each day's issue on the morning of publication. The 11:17 UTC run usually sees that day's documents; the 3 day overlap picks up anything indexed later.
 - **Volume.** SEC and FERC publish many notices per day (SRO filings, combined notices). A full 365 day backfill for the default agencies is a few hundred requests and several MB of JSON. Stay well under GitHub's 100 MB file limit by narrowing agencies or retention if you add many.
 - **Search** is substring matching without stemming, synonyms or accent folding.

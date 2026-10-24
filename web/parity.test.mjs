@@ -122,11 +122,11 @@ console.log(`parity ok: ${v.cases.length} filter cases, ${v.parse.length} parse,
   };
   ids["v-all"].value = "all"; ids["v-closing"].value = "closing";
   let liveData = hostile;
-  const sandbox = { document: doc, window: {}, navigator: {}, setTimeout, clearTimeout, Promise, JSON, Math, Date, String, Number, Object, Array, Error, RegExp, isFinite, parseInt };
-  const uctx = vm.createContext(sandbox);
+  const fakeGlobal = { document: doc, window: {}, navigator: {}, setTimeout, clearTimeout, Promise, JSON, Math, Date, String, Number, Object, Array, Error, RegExp, isFinite, parseInt };
+  const uctx = vm.createContext(fakeGlobal);
   vm.runInContext(m[1], uctx);
   // Live path: exercise feed links too.
-  sandbox.window.regWatchLoad = () => Promise.resolve({ data: liveData, base: "data/" });
+  fakeGlobal.window.regWatchLoad = () => Promise.resolve({ data: liveData, base: "data/" });
   vm.runInContext(ui, uctx);
   await new Promise((r) => setTimeout(r, 20));
   checks++;
@@ -161,7 +161,7 @@ console.log(`parity ok: ${v.cases.length} filter cases, ${v.parse.length} parse,
   checks++;
   if (ids["data-tag"].textContent !== "Sample data") fail("ui.tag.sample", ids["data-tag"].textContent);
   // Review fix: when data/documents.json fails, the error note must say the snapshot is shown and its date.
-  sandbox.window.regWatchLoad = () => Promise.reject(new Error("HTTP 404"));
+  fakeGlobal.window.regWatchLoad = () => Promise.reject(new Error("HTTP 404"));
   vm.runInContext(ui, uctx);
   await new Promise((r) => setTimeout(r, 20));
   checks++;

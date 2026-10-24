@@ -13,7 +13,7 @@
   ],
   "per_page": 100,
   "retention_days": 365,
-  "first_run_lookback_days": 30,
+  "first_run_lookback_days": 365,
   "overlap_days": 3,
   "chunk_days": 31,
   "max_pages_per_query": 40,

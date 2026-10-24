@@ -41,6 +41,22 @@ jobs:
       - run: python web/build_pages.py
       - run: git diff --exit-code docs/index.html
 
+  published-site:
+    # Runs the collect command on the recorded fixtures in a release-filled copy,
+    # assembles the site with pages.yml's own step, serves it under /reg-watch/
+    # and tests the page in Chromium.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .[dev] playwright
+      - run: python -m playwright install --with-deps chromium
+      - run: pytest -q tests/test_published_site.py
+
   gitleaks:
     runs-on: ubuntu-latest
     steps:

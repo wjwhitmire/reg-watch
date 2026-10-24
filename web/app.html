@@ -127,6 +127,7 @@ button.primary { background: var(--accent); color: var(--accent-ink); border-col
 textarea { width: 100%; min-height: 120px; font-family: var(--mono); font-size: 16px; background: var(--field); color: var(--fg); border: 1px solid var(--line); border-radius: 0; padding: 8px; margin-top: 8px; }
 .feeds { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 15px; }
 .feeds a { color: var(--accent); font-family: var(--mono); }
+@media (pointer: coarse) { .doc-links a, .feeds a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; } }
 .hidden { display: none !important; }
 
 /* Footer: colophon */
